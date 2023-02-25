@@ -1,15 +1,28 @@
-import { firebaseApp } from '@services/firebase';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { FcGoogle } from 'react-icons/fc';
+
+import { firebaseApp } from '@services/firebase';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 const Login: NextPage = () => {
   const firebaseAuth = getAuth(firebaseApp);
   const provider = new GoogleAuthProvider();
+  const router = useRouter();
+
   const signIn = async () => {
     const response = await signInWithPopup(firebaseAuth, provider);
-    console.log(response);
+    console.log(response); // DEV TEST
+
+    const { user } = response;
+    const { refreshToken, providerData } = user;
+    console.log(refreshToken, providerData); // DEV TEST
+
+    localStorage.setItem('user', JSON.stringify(providerData));
+    localStorage.setItem('accessToken', JSON.stringify(refreshToken));
+
+    router.push('/');
   };
   return (
     <div className="w-screen h-screen flex justify-center items-center bg-slate-800 relative">
@@ -34,3 +47,6 @@ const Login: NextPage = () => {
 };
 
 export default Login;
+
+// References:
+// https://www.youtube.com/watch?v=gGshLDSconM

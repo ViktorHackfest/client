@@ -21,6 +21,7 @@
       "@constants": ["constants"],
       "@constants/*": ["constants/*"],
       "@utils": ["utils"],
+      "@utils/*": ["utils/*"],
       "@hooks": ["components/hooks"],
       "@styles/*": ["styles/*"],
       "@ui/*": ["components/ui/*"],
