@@ -1,13 +1,18 @@
+import { firebaseApp } from '@services/firebase';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { FcGoogle } from 'react-icons/fc';
 
 const Login: NextPage = () => {
+  const firebaseAuth = getAuth(firebaseApp);
+  const provider = new GoogleAuthProvider();
   const signIn = async () => {
-    console.log('SIGN IN');
+    const response = await signInWithPopup(firebaseAuth, provider);
+    console.log(response);
   };
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-white relative">
+    <div className="w-screen h-screen flex justify-center items-center bg-slate-800 relative">
       <Image
         src="https://i.pinimg.com/564x/3c/dd/a3/3cdda3f8bda0edcd193f3612b0f6f683.jpg"
         width={100}

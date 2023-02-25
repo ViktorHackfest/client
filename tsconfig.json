@@ -24,7 +24,9 @@
       "@hooks": ["components/hooks"],
       "@styles/*": ["styles/*"],
       "@ui/*": ["components/ui/*"],
-      "@ui": ["components/ui"]
+      "@ui": ["components/ui"],
+      "@services": ["services"],
+      "@services/*": ["services/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
