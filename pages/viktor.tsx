@@ -274,6 +274,8 @@ const Viktor: NextPage = () => {
         </div>
       </div>
       <TextFieldSection />
+      <div className="bg-gray-100 p-4">TEST</div>
+      <div className="bg-gray-200 p-4">TEST</div>
     </div>
   );
 };
