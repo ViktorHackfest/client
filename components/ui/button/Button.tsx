@@ -14,15 +14,7 @@ type ButtonProps = {
   leftIcon?: React.SVGAttributes<SVGElement>;
   rightIcon?: React.SVGAttributes<SVGElement>;
 
-  preset:
-    | 'primaryDark'
-    | 'primaryLight'
-    | 'secondaryDark'
-    | 'secondaryLight'
-    | 'tertiaryDark'
-    | 'tertiaryLight'
-    | 'linkDark'
-    | 'linkLight';
+  preset: 'primary' | 'secondary' | 'tertiary' | 'text';
 
   children?: React.ReactNode;
   [props: string]: any;

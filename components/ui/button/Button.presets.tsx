@@ -13,7 +13,7 @@ type ButtonPresetProps = {
 };
 
 export const BUTTON_PRESETS: ButtonPresetProps = {
-  primaryDark: {
+  primary: {
     border: 'rounded-lg',
     borderWidth: 'border-2',
     color: 'bg-denim-dark active:bg-denim-light',
@@ -23,7 +23,7 @@ export const BUTTON_PRESETS: ButtonPresetProps = {
     disabled:
       'disabled:bg-grey-soft  disabled:border-grey-soft disabled:text-grey disabled:hover:shadow-none',
   },
-  primaryLight: {
+  secondary: {
     border: 'rounded-lg',
     borderWidth: 'border-2',
     color: 'bg-totalwhite active:bg-powder',
@@ -33,7 +33,7 @@ export const BUTTON_PRESETS: ButtonPresetProps = {
     disabled:
       'disabled:bg-grey-soft  disabled:border-grey-soft disabled:text-grey disabled:hover:shadow-none',
   },
-  secondaryDark: {
+  tertiary: {
     border: 'rounded-lg',
     borderWidth: 'border-2',
     color: 'bg-transparent active:bg-powder/60',
@@ -42,7 +42,7 @@ export const BUTTON_PRESETS: ButtonPresetProps = {
     borderColor: 'border-powder active:border-powder/0',
     disabled: 'disabled:border-grey disabled:text-grey disabled:bg-denim-dark',
   },
-  secondaryLight: {
+  text: {
     border: 'rounded-lg',
     borderWidth: 'border-2',
     color: 'bg-transparent active:bg-denim-light/40',
@@ -50,41 +50,5 @@ export const BUTTON_PRESETS: ButtonPresetProps = {
     text: 'text-denim-dark',
     borderColor: 'border-denim-light active:border-denim-light/0',
     disabled: 'disabled:border-grey disabled:text-grey disabled:bg-totalwhite',
-  },
-  tertiaryDark: {
-    border: 'rounded-lg',
-    borderWidth: 'none',
-    color: 'bg-transparent',
-    hover: 'hover:text-cerulean hover:bg-transparent ',
-    text: 'text-denim-dark active:text-denim-dark/60',
-    borderColor: '',
-    disabled: 'disabled:text-grey',
-  },
-  tertiaryLight: {
-    border: 'rounded-lg',
-    borderWidth: 'none',
-    color: 'bg-transparent',
-    hover: 'hover:text-cerulean hover:bg-transparent',
-    text: 'text-totalwhite active:text-totalwhite/60',
-    borderColor: '',
-    disabled: 'disabled:text-grey',
-  },
-  linkDark: {
-    border: 'rounded-lg',
-    borderWidth: 'none',
-    color: 'bg-transparent',
-    hover: 'hover:no-underline',
-    text: 'text-denim-dark underline underline-offset-1 active:no-underline',
-    borderColor: '',
-    disabled: 'disabled:text-grey disabled:hover:underline',
-  },
-  linkLight: {
-    border: 'rounded-lg',
-    borderWidth: 'none',
-    color: 'bg-transparent',
-    hover: 'hover:no-underline',
-    text: 'text-totalwhite underline underline-offset-1 active:no-underline',
-    borderColor: '',
-    disabled: 'disabled:text-grey disabled:hover:underline',
   },
 };

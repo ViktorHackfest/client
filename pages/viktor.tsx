@@ -146,32 +146,32 @@ const Viktor: NextPage = () => {
 
         <div className="flex flex-wrap justify-center items-center gap-4 p-6">
           <Button
-            preset="primaryDark"
+            preset="primary"
             leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
             rightIcon={<BsChevronRight className="h-5 w-5" />}
           >
             Button
           </Button>
-          <Button preset="primaryDark">Button</Button>
+          <Button preset="primary">Button</Button>
           <Button
-            preset="secondaryLight"
+            preset="secondary"
             leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
             rightIcon={<BsChevronRight className="h-5 w-5" />}
           >
             Button
           </Button>
-          <Button preset="secondaryLight">Button</Button>
+          <Button preset="secondary">Button</Button>
           <Button
-            preset="tertiaryDark"
+            preset="tertiary"
             leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
             rightIcon={<BsChevronRight className="h-5 w-5" />}
           >
             Button
           </Button>
-          <Button preset="tertiaryDark">Button</Button>
+          <Button preset="tertiary">Button</Button>
           <Link href={'https://www.google.com'} passHref>
             <Button
-              preset="linkDark"
+              preset="text"
               leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
               rightIcon={<BsChevronRight className="h-5 w-5" />}
             >
@@ -179,38 +179,38 @@ const Viktor: NextPage = () => {
             </Button>
           </Link>
           <Link href={'https://www.google.com'} passHref>
-            <Button preset="linkDark">Button</Button>
+            <Button preset="text">Button</Button>
           </Link>
         </div>
 
         <div className="flex flex-wrap justify-center items-center bg-denim-dark gap-4 p-6 rounded-3xl">
           <Button
-            preset="primaryLight"
+            preset="primary"
             leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
             rightIcon={<BsChevronRight className="h-5 w-5" />}
           >
             Button
           </Button>
-          <Button preset="primaryLight">Button</Button>
+          <Button preset="primary">Button</Button>
           <Button
-            preset="secondaryDark"
+            preset="secondary"
             leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
             rightIcon={<BsChevronRight className="h-5 w-5" />}
           >
             Button
           </Button>
-          <Button preset="secondaryDark">Button</Button>
+          <Button preset="secondary">Button</Button>
           <Button
-            preset="tertiaryLight"
+            preset="tertiary"
             leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
             rightIcon={<BsChevronRight className="h-5 w-5" />}
           >
             Button
           </Button>
-          <Button preset="tertiaryLight">Button</Button>
+          <Button preset="tertiary">Button</Button>
           <Link href={'https://www.google.com'} passHref>
             <Button
-              preset="linkLight"
+              preset="text"
               leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
               rightIcon={<BsChevronRight className="h-5 w-5" />}
             >
@@ -218,47 +218,47 @@ const Viktor: NextPage = () => {
             </Button>
           </Link>
           <Link href={'https://www.google.com'} passHref>
-            <Button preset="linkLight">Button</Button>
+            <Button preset="text">Button</Button>
           </Link>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-4 p-6">
           <Button
-            preset="primaryDark"
+            preset="primary"
             leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
             rightIcon={<BsChevronRight className="h-5 w-5" />}
             disabled
           >
             Button
           </Button>
-          <Button preset="primaryDark" disabled>
+          <Button preset="primary" disabled>
             Button
           </Button>
           <Button
-            preset="secondaryLight"
+            preset="secondary"
             leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
             rightIcon={<BsChevronRight className="h-5 w-5" />}
             disabled
           >
             Button
           </Button>
-          <Button preset="secondaryLight" disabled>
+          <Button preset="secondary" disabled>
             Button
           </Button>
           <Button
-            preset="tertiaryDark"
+            preset="tertiary"
             leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
             rightIcon={<BsChevronRight className="h-5 w-5" />}
             disabled
           >
             Button
           </Button>
-          <Button preset="tertiaryDark" disabled>
+          <Button preset="tertiary" disabled>
             Button
           </Button>
           <Link href={'https://www.google.com'} passHref>
             <Button
-              preset="linkDark"
+              preset="text"
               leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
               rightIcon={<BsChevronRight className="h-5 w-5" />}
               disabled
@@ -267,7 +267,7 @@ const Viktor: NextPage = () => {
             </Button>
           </Link>
           <Link href={'https://www.google.com'} passHref>
-            <Button preset="linkDark" disabled>
+            <Button preset="text" disabled>
               Button
             </Button>
           </Link>
