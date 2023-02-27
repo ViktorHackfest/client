@@ -80,6 +80,7 @@ const Viktor: NextPage = () => {
         <Header preset="h6" className="font-light">
           Lorem ipsum.
         </Header>
+        <div className="bg-danger-dark">TEST</div>
       </div>
     </div>
   );
