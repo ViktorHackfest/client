@@ -132,152 +132,158 @@ const Viktor: NextPage = () => {
           Info
         </button>
       </div>
-      <div className="flex flex-col bg-totalwhite w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
-        <Header preset="h2" className="text-center text-red-500 font-bold m-4">
-          Button
-        </Header>
-
-        <div className="flex flex-wrap justify-evenly items-center gap-8 p-3 text-denim-dark">
-          <Header preset="h6">Primary</Header>
-          <Header preset="h6">Secondary</Header>
-          <Header preset="h6">Tertiary</Header>
-          <Header preset="h6">Link</Header>
-        </div>
-
-        <div className="flex flex-wrap justify-center items-center gap-4 p-6">
-          <Button
-            preset="primary"
-            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-            rightIcon={<BsChevronRight className="h-5 w-5" />}
-          >
-            Button
-          </Button>
-          <Button preset="primary">Button</Button>
-          <Button
-            preset="secondary"
-            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-            rightIcon={<BsChevronRight className="h-5 w-5" />}
-          >
-            Button
-          </Button>
-          <Button preset="secondary">Button</Button>
-          <Button
-            preset="tertiary"
-            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-            rightIcon={<BsChevronRight className="h-5 w-5" />}
-          >
-            Button
-          </Button>
-          <Button preset="tertiary">Button</Button>
-          <Link href={'https://www.google.com'} passHref>
-            <Button
-              preset="text"
-              leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-              rightIcon={<BsChevronRight className="h-5 w-5" />}
-            >
-              Button
-            </Button>
-          </Link>
-          <Link href={'https://www.google.com'} passHref>
-            <Button preset="text">Button</Button>
-          </Link>
-        </div>
-
-        <div className="flex flex-wrap justify-center items-center bg-denim-dark gap-4 p-6 rounded-3xl">
-          <Button
-            preset="primary"
-            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-            rightIcon={<BsChevronRight className="h-5 w-5" />}
-          >
-            Button
-          </Button>
-          <Button preset="primary">Button</Button>
-          <Button
-            preset="secondary"
-            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-            rightIcon={<BsChevronRight className="h-5 w-5" />}
-          >
-            Button
-          </Button>
-          <Button preset="secondary">Button</Button>
-          <Button
-            preset="tertiary"
-            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-            rightIcon={<BsChevronRight className="h-5 w-5" />}
-          >
-            Button
-          </Button>
-          <Button preset="tertiary">Button</Button>
-          <Link href={'https://www.google.com'} passHref>
-            <Button
-              preset="text"
-              leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-              rightIcon={<BsChevronRight className="h-5 w-5" />}
-            >
-              Button
-            </Button>
-          </Link>
-          <Link href={'https://www.google.com'} passHref>
-            <Button preset="text">Button</Button>
-          </Link>
-        </div>
-
-        <div className="flex flex-wrap justify-center items-center gap-4 p-6">
-          <Button
-            preset="primary"
-            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-            rightIcon={<BsChevronRight className="h-5 w-5" />}
-            disabled
-          >
-            Button
-          </Button>
-          <Button preset="primary" disabled>
-            Button
-          </Button>
-          <Button
-            preset="secondary"
-            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-            rightIcon={<BsChevronRight className="h-5 w-5" />}
-            disabled
-          >
-            Button
-          </Button>
-          <Button preset="secondary" disabled>
-            Button
-          </Button>
-          <Button
-            preset="tertiary"
-            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-            rightIcon={<BsChevronRight className="h-5 w-5" />}
-            disabled
-          >
-            Button
-          </Button>
-          <Button preset="tertiary" disabled>
-            Button
-          </Button>
-          <Link href={'https://www.google.com'} passHref>
-            <Button
-              preset="text"
-              leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
-              rightIcon={<BsChevronRight className="h-5 w-5" />}
-              disabled
-            >
-              Button
-            </Button>
-          </Link>
-          <Link href={'https://www.google.com'} passHref>
-            <Button preset="text" disabled>
-              Button
-            </Button>
-          </Link>
-        </div>
-      </div>
+      <ButtonSection />
       <TextFieldSection />
       <ColorSection />
     </div>
   );
 };
+
+function ButtonSection() {
+  return (
+    <div className="flex flex-col bg-totalwhite w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
+      <Header preset="h2" className="text-center text-red-500 font-bold m-4">
+        Button
+      </Header>
+
+      <div className="flex flex-wrap justify-evenly items-center gap-8 p-3 text-denim-dark">
+        <Header preset="h6">Primary</Header>
+        <Header preset="h6">Secondary</Header>
+        <Header preset="h6">Tertiary</Header>
+        <Header preset="h6">Link</Header>
+      </div>
+
+      <div className="flex flex-wrap justify-center items-center gap-4 p-6">
+        <Button
+          preset="primary"
+          leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+          rightIcon={<BsChevronRight className="h-5 w-5" />}
+        >
+          Button
+        </Button>
+        <Button preset="primary">Button</Button>
+        <Button
+          preset="secondary"
+          leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+          rightIcon={<BsChevronRight className="h-5 w-5" />}
+        >
+          Button
+        </Button>
+        <Button preset="secondary">Button</Button>
+        <Button
+          preset="tertiary"
+          leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+          rightIcon={<BsChevronRight className="h-5 w-5" />}
+        >
+          Button
+        </Button>
+        <Button preset="tertiary">Button</Button>
+        <Link href={'https://www.google.com'} passHref>
+          <Button
+            preset="text"
+            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+            rightIcon={<BsChevronRight className="h-5 w-5" />}
+          >
+            Button
+          </Button>
+        </Link>
+        <Link href={'https://www.google.com'} passHref>
+          <Button preset="text">Button</Button>
+        </Link>
+      </div>
+
+      <div className="flex flex-wrap justify-center items-center bg-denim-dark gap-4 p-6 rounded-3xl">
+        <Button
+          preset="primary"
+          leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+          rightIcon={<BsChevronRight className="h-5 w-5" />}
+        >
+          Button
+        </Button>
+        <Button preset="primary">Button</Button>
+        <Button
+          preset="secondary"
+          leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+          rightIcon={<BsChevronRight className="h-5 w-5" />}
+        >
+          Button
+        </Button>
+        <Button preset="secondary">Button</Button>
+        <Button
+          preset="tertiary"
+          leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+          rightIcon={<BsChevronRight className="h-5 w-5" />}
+        >
+          Button
+        </Button>
+        <Button preset="tertiary">Button</Button>
+        <Link href={'https://www.google.com'} passHref>
+          <Button
+            preset="text"
+            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+            rightIcon={<BsChevronRight className="h-5 w-5" />}
+          >
+            Button
+          </Button>
+        </Link>
+        <Link href={'https://www.google.com'} passHref>
+          <Button preset="text">Button</Button>
+        </Link>
+      </div>
+
+      <div className="flex flex-wrap justify-center items-center gap-4 p-6">
+        <Button
+          preset="primary"
+          leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+          rightIcon={<BsChevronRight className="h-5 w-5" />}
+          disabled
+        >
+          Button
+        </Button>
+        <Button preset="primary" disabled>
+          Button
+        </Button>
+        <Button
+          preset="secondary"
+          leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+          rightIcon={<BsChevronRight className="h-5 w-5" />}
+          disabled
+        >
+          Button
+        </Button>
+        <Button preset="secondary" disabled>
+          Button
+        </Button>
+        <Button
+          preset="tertiary"
+          leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+          rightIcon={<BsChevronRight className="h-5 w-5" />}
+          disabled
+        >
+          Button
+        </Button>
+        <Button preset="tertiary" disabled>
+          Button
+        </Button>
+        <Link href={'https://www.google.com'} passHref>
+          <Button
+            preset="text"
+            leftIcon={<AiOutlinePlusCircle className="h-5 w-5" />}
+            rightIcon={<BsChevronRight className="h-5 w-5" />}
+            disabled
+          >
+            Button
+          </Button>
+        </Link>
+        <Link href={'https://www.google.com'} passHref>
+          <Button preset="text" disabled>
+            Button
+          </Button>
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 function TextFieldSection() {
   const [hasLabel, setHasLabel] = useState(false);
@@ -391,52 +397,86 @@ function TextFieldSection() {
 
 function ColorSection() {
   return (
-    <div>
-      <div>Gray</div>
-      <div className="bg-gray-100 p-4">gray-100</div>
-      <div className="bg-gray-200 p-4">gray-200</div>
-      <div className="bg-gray-300 p-4">gray-300</div>
-      <div className="bg-gray-400 p-4">gray-400</div>
-      <div className="bg-gray-500 p-4">gray-500</div>
-      <div className="bg-gray-600 p-4">gray-600</div>
+    <div className="flex flex-col bg-totalwhite w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
+      <Header preset="h2" className="text-center text-red-500 font-bold m-4">
+        Color
+      </Header>
 
-      <div>Red</div>
-      <div className="bg-red-100 p-4">red-100</div>
-      <div className="bg-red-200 p-4">red-200</div>
-      <div className="bg-red-300 p-4">red-300</div>
-      <div className="bg-red-400 p-4">red-400</div>
-      <div className="bg-red-500 p-4">red-500</div>
-      <div className="bg-red-600 p-4">red-600</div>
+      <div className="m-6">
+        <Header preset="h6" className="text-center">
+          Gray
+        </Header>
+        <div className="h-4"></div>
+        <div className="bg-gray-100 p-4">gray-100</div>
+        <div className="bg-gray-200 p-4">gray-200</div>
+        <div className="bg-gray-300 p-4">gray-300</div>
+        <div className="bg-gray-400 p-4">gray-400</div>
+        <div className="bg-gray-500 p-4">gray-500</div>
+        <div className="bg-gray-600 p-4">gray-600</div>
+      </div>
 
-      <div>Yellow</div>
-      <div className="bg-yellow-100 p-4">yellow-100</div>
-      <div className="bg-yellow-200 p-4">yellow-200</div>
-      <div className="bg-yellow-300 p-4">yellow-300</div>
-      <div className="bg-yellow-400 p-4">yellow-400</div>
-      <div className="bg-yellow-500 p-4">yellow-500</div>
-      <div className="bg-yellow-600 p-4">yellow-600</div>
+      <div className="m-6">
+        <Header preset="h6" className="text-center">
+          Red
+        </Header>
+        <div className="h-4"></div>
+        <div className="bg-red-100 p-4">red-100</div>
+        <div className="bg-red-200 p-4">red-200</div>
+        <div className="bg-red-300 p-4">red-300</div>
+        <div className="bg-red-400 p-4">red-400</div>
+        <div className="bg-red-500 p-4">red-500</div>
+        <div className="bg-red-600 p-4">red-600</div>
+      </div>
 
-      <div>Green</div>
-      <div className="bg-green-100 p-4">green-100</div>
-      <div className="bg-green-200 p-4">green-200</div>
-      <div className="bg-green-300 p-4">green-300</div>
-      <div className="bg-green-400 p-4">green-400</div>
-      <div className="bg-green-500 p-4">green-500</div>
-      <div className="bg-green-600 p-4">green-600</div>
+      <div className="m-6">
+        <Header preset="h6" className="text-center">
+          Yellow
+        </Header>
+        <div className="h-4"></div>
+        <div className="bg-yellow-100 p-4">yellow-100</div>
+        <div className="bg-yellow-200 p-4">yellow-200</div>
+        <div className="bg-yellow-300 p-4">yellow-300</div>
+        <div className="bg-yellow-400 p-4">yellow-400</div>
+        <div className="bg-yellow-500 p-4">yellow-500</div>
+        <div className="bg-yellow-600 p-4">yellow-600</div>
+      </div>
 
-      <div>Blue</div>
-      <div className="bg-blue-100 p-4">blue-100</div>
-      <div className="bg-blue-200 p-4">blue-200</div>
-      <div className="bg-blue-300 p-4">blue-300</div>
-      <div className="bg-blue-400 p-4">blue-400</div>
-      <div className="bg-blue-500 p-4">blue-500</div>
+      <div className="m-6">
+        <Header preset="h6" className="text-center">
+          Green
+        </Header>
+        <div className="h-4"></div>
+        <div className="bg-green-100 p-4">green-100</div>
+        <div className="bg-green-200 p-4">green-200</div>
+        <div className="bg-green-300 p-4">green-300</div>
+        <div className="bg-green-400 p-4">green-400</div>
+        <div className="bg-green-500 p-4">green-500</div>
+        <div className="bg-green-600 p-4">green-600</div>
+      </div>
 
-      <div>Pink</div>
-      <div className="bg-pink-100 p-4">pink-100</div>
-      <div className="bg-pink-200 p-4">pink-200</div>
-      <div className="bg-pink-300 p-4">pink-300</div>
-      <div className="bg-pink-400 p-4">pink-400</div>
-      <div className="bg-pink-500 p-4">pink-500</div>
+      <div className="m-6">
+        <Header preset="h6" className="text-center">
+          Blue
+        </Header>
+        <div className="h-4"></div>
+        <div className="bg-blue-100 p-4">blue-100</div>
+        <div className="bg-blue-200 p-4">blue-200</div>
+        <div className="bg-blue-300 p-4">blue-300</div>
+        <div className="bg-blue-400 p-4">blue-400</div>
+        <div className="bg-blue-500 p-4">blue-500</div>
+      </div>
+
+      <div className="m-6">
+        <Header preset="h6" className="text-center">
+          Pink
+        </Header>
+        <div className="h-4"></div>
+        <div className="bg-pink-100 p-4">pink-100</div>
+        <div className="bg-pink-200 p-4">pink-200</div>
+        <div className="bg-pink-300 p-4">pink-300</div>
+        <div className="bg-pink-400 p-4">pink-400</div>
+        <div className="bg-pink-500 p-4">pink-500</div>
+      </div>
     </div>
   );
 }
