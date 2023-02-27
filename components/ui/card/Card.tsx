@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Box, VStack } from '@chakra-ui/react';
 import { useWindowSize } from '@hooks';
-import { Header } from '@ui';
 
 type CardProps = {
   className?: string;
@@ -33,12 +32,11 @@ export const Card = ({
         {icon ? <>{icon}</> : null}
 
         <Box>
-          <Header
-            preset={width >= 1280 ? 'h4' : width >= 768 ? 'h5' : 'h6'}
+          <div
             className={`${preset === 'dark' ? 'text-white' : 'text-gray-700'}`}
           >
             {children}
-          </Header>
+          </div>
         </Box>
       </VStack>
     </div>

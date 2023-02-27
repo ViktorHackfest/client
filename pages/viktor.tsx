@@ -45,27 +45,99 @@ function TypographySection() {
           Header - Nunito
         </Header>
         <Card preset="light">
-          <Header preset="t1">Lorem ipsum.</Header>
-          <Header preset="t2">Lorem ipsum.</Header>
-          <Header preset="h1">Lorem ipsum.</Header>
-          <Header preset="h2">Lorem ipsum.</Header>
-          <Header preset="h3">Lorem ipsum.</Header>
-          <Header preset="h4">Lorem ipsum.</Header>
-          <Header preset="h5">Lorem ipsum.</Header>
-          <Header preset="h6">Lorem ipsum.</Header>
+          <div className="flex gap-32">
+            <div>t1</div>
+            <div>72px</div>
+            <div>4.5rem</div>
+            <Header preset="t1" className="pb-8">
+              Lorem ipsum.
+            </Header>
+          </div>
+          <div className="flex gap-32">
+            <div>t2</div>
+            <div>60px</div>
+            <div>3.75rem</div>
+            <Header preset="t2" className="pb-6">
+              Lorem ipsum.
+            </Header>
+          </div>
+          <div className="flex gap-32">
+            <div>h1</div>
+            <div>48px</div>
+            <div>3rem</div>
+            <Header preset="h1" className="pb-4">
+              Lorem ipsum.
+            </Header>
+          </div>
+          <div className="flex gap-32">
+            <div>h2</div>
+            <div>36px</div>
+            <div>2.25rem</div>
+            <Header preset="h2" className="pb-2">
+              Lorem ipsum.
+            </Header>
+          </div>
+          <div className="flex gap-32">
+            <div>h3</div>
+            <div>32px</div>
+            <div>2rem</div>
+            <Header preset="h3">Lorem ipsum.</Header>
+          </div>
+          <div className="flex gap-32">
+            <div>h4</div>
+            <div>28px</div>
+            <div>1.75rem</div>
+            <Header preset="h4">Lorem ipsum.</Header>
+          </div>
+          <div className="flex gap-32">
+            <div>h5</div>
+            <div>24px</div>
+            <div>1.5rem</div>
+            <Header preset="h5">Lorem ipsum.</Header>
+          </div>
+          <div className="flex gap-32">
+            <div>h6</div>
+            <div>20px</div>
+            <div>1.25rem</div>
+            <Header preset="h6">Lorem ipsum.</Header>
+          </div>
         </Card>
         <Header preset="h5" className="py-4">
           Body - Nunito
         </Header>
         <Card preset="light">
-          <Body preset="b1">Lorem ipsum.</Body>
-          <Body preset="b2">Lorem ipsum.</Body>
-          <Body preset="b3">Lorem ipsum.</Body>
-          <Body preset="b4">Lorem ipsum.</Body>
-          <Body preset="b5">Lorem ipsum.</Body>
-          <Body preset="c1">Lorem ipsum.</Body>
-          <Body preset="c2">Lorem ipsum.</Body>
-          <Body preset="f">Lorem ipsum.</Body>
+          <div className="flex gap-8">
+            <div>b1</div>
+            <Body preset="b1">Lorem ipsum.</Body>
+          </div>
+          <div className="flex gap-8">
+            <div>b2</div>
+            <Body preset="b2">Lorem ipsum.</Body>
+          </div>
+          <div className="flex gap-8">
+            <div>b3</div>
+            <Body preset="b3">Lorem ipsum.</Body>
+          </div>
+          <div className="flex gap-8">
+            <div>b4</div>
+            <Body preset="b4">Lorem ipsum.</Body>
+          </div>
+          <div className="flex gap-8">
+            <div>b5</div>
+            <Body preset="b5">Lorem ipsum.</Body>
+          </div>
+          <div className="flex gap-8">
+            <div>c1</div>
+            <Body preset="c1">Lorem ipsum.</Body>
+          </div>
+          <div className="flex gap-8">
+            <div>c2</div>
+            <Body preset="c2">Lorem ipsum.</Body>
+          </div>
+          <div className="flex gap-8">
+            <div>f&nbsp;&nbsp;</div>
+            <Body preset="f">Lorem ipsum.</Body>
+          </div>
         </Card>
       </Card>
     </div>
