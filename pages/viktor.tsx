@@ -274,8 +274,7 @@ const Viktor: NextPage = () => {
         </div>
       </div>
       <TextFieldSection />
-      <div className="bg-gray-100 p-4">TEST</div>
-      <div className="bg-gray-200 p-4">TEST</div>
+      <ColorSection />
     </div>
   );
 };
@@ -387,6 +386,58 @@ function TextFieldSection() {
         </div>
       </div>
     </Section>
+  );
+}
+
+function ColorSection() {
+  return (
+    <div>
+      <div>Gray</div>
+      <div className="bg-gray-100 p-4">gray-100</div>
+      <div className="bg-gray-200 p-4">gray-200</div>
+      <div className="bg-gray-300 p-4">gray-300</div>
+      <div className="bg-gray-400 p-4">gray-400</div>
+      <div className="bg-gray-500 p-4">gray-500</div>
+      <div className="bg-gray-600 p-4">gray-600</div>
+
+      <div>Red</div>
+      <div className="bg-red-100 p-4">red-100</div>
+      <div className="bg-red-200 p-4">red-200</div>
+      <div className="bg-red-300 p-4">red-300</div>
+      <div className="bg-red-400 p-4">red-400</div>
+      <div className="bg-red-500 p-4">red-500</div>
+      <div className="bg-red-600 p-4">red-600</div>
+
+      <div>Yellow</div>
+      <div className="bg-yellow-100 p-4">yellow-100</div>
+      <div className="bg-yellow-200 p-4">yellow-200</div>
+      <div className="bg-yellow-300 p-4">yellow-300</div>
+      <div className="bg-yellow-400 p-4">yellow-400</div>
+      <div className="bg-yellow-500 p-4">yellow-500</div>
+      <div className="bg-yellow-600 p-4">yellow-600</div>
+
+      <div>Green</div>
+      <div className="bg-green-100 p-4">green-100</div>
+      <div className="bg-green-200 p-4">green-200</div>
+      <div className="bg-green-300 p-4">green-300</div>
+      <div className="bg-green-400 p-4">green-400</div>
+      <div className="bg-green-500 p-4">green-500</div>
+      <div className="bg-green-600 p-4">green-600</div>
+
+      <div>Blue</div>
+      <div className="bg-blue-100 p-4">blue-100</div>
+      <div className="bg-blue-200 p-4">blue-200</div>
+      <div className="bg-blue-300 p-4">blue-300</div>
+      <div className="bg-blue-400 p-4">blue-400</div>
+      <div className="bg-blue-500 p-4">blue-500</div>
+
+      <div>Pink</div>
+      <div className="bg-pink-100 p-4">pink-100</div>
+      <div className="bg-pink-200 p-4">pink-200</div>
+      <div className="bg-pink-300 p-4">pink-300</div>
+      <div className="bg-pink-400 p-4">pink-400</div>
+      <div className="bg-pink-500 p-4">pink-500</div>
+    </div>
   );
 }
 
