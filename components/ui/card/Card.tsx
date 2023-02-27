@@ -23,8 +23,8 @@ export const Card = ({
   const { width } = useWindowSize();
   return (
     <div
-      className={`transition-all gap-2 rounded-3xl shadow-lg shadow-red-200 ${
-        preset === 'dark' ? 'bg-red-400' : ''
+      className={`transition-all gap-2 rounded-3xl ${
+        preset === 'dark' ? 'bg-red-400' : 'bg-white'
       } 
       ${padding ? padding : 'p-10'}
       ${className}`}

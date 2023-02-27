@@ -1,5 +1,6 @@
 import { Checkbox, FormControl, Stack } from '@chakra-ui/react';
 import {
+  Body,
   Button,
   Card,
   FormLabel,
@@ -37,83 +38,35 @@ function TypographySection() {
   return (
     <div className="w-[85%] mx-auto mb-16">
       <Card preset="dark">
-        <div>Typography</div>
-        <div>Header</div>
-        <div>
-          <Header preset="t1" className="font-bold">
-            Lorem ipsum.
-          </Header>
-          <Header preset="t1" className="font-normal">
-            Lorem ipsum.
-          </Header>
-          <Header preset="t1" className="font-light">
-            Lorem ipsum.
-          </Header>
-          <Header preset="t2" className="font-bold">
-            Lorem ipsum.
-          </Header>
-          <Header preset="t2" className="font-normal">
-            Lorem ipsum.
-          </Header>
-          <Header preset="t2" className="font-light">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h1" className="font-bold">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h1" className="font-normal">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h1" className="font-light">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h2" className="font-bold">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h2" className="font-normal">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h2" className="font-light">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h3" className="font-bold">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h3" className="font-normal">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h3" className="font-light">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h4" className="font-bold">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h4" className="font-normal">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h4" className="font-light">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h5" className="font-bold">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h5" className="font-normal">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h5" className="font-light">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h6" className="font-bold">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h6" className="font-normal">
-            Lorem ipsum.
-          </Header>
-          <Header preset="h6" className="font-light">
-            Lorem ipsum.
-          </Header>
-          <div className="bg-danger-dark">TEST</div>
-        </div>
+        <Header preset="h2" className="font-bold">
+          Typography
+        </Header>
+        <Header preset="h5" className="py-4">
+          Header - Nunito
+        </Header>
+        <Card preset="light">
+          <Header preset="t1">Lorem ipsum.</Header>
+          <Header preset="t2">Lorem ipsum.</Header>
+          <Header preset="h1">Lorem ipsum.</Header>
+          <Header preset="h2">Lorem ipsum.</Header>
+          <Header preset="h3">Lorem ipsum.</Header>
+          <Header preset="h4">Lorem ipsum.</Header>
+          <Header preset="h5">Lorem ipsum.</Header>
+          <Header preset="h6">Lorem ipsum.</Header>
+        </Card>
+        <Header preset="h5" className="py-4">
+          Body - Nunito
+        </Header>
+        <Card preset="light">
+          <Body preset="b1">Lorem ipsum.</Body>
+          <Body preset="b2">Lorem ipsum.</Body>
+          <Body preset="b3">Lorem ipsum.</Body>
+          <Body preset="b4">Lorem ipsum.</Body>
+          <Body preset="b5">Lorem ipsum.</Body>
+          <Body preset="c1">Lorem ipsum.</Body>
+          <Body preset="c2">Lorem ipsum.</Body>
+          <Body preset="f">Lorem ipsum.</Body>
+        </Card>
       </Card>
     </div>
   );
@@ -164,7 +117,7 @@ function ToastSection() {
 
 function ButtonSection() {
   return (
-    <div className="flex flex-col bg-totalwhite w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
+    <div className="flex flex-col bg-white w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
       <Header preset="h2" className="text-center text-red-500 font-bold m-4">
         Button
       </Header>
@@ -420,7 +373,7 @@ function TextFieldSection() {
 
 function ColorSection() {
   return (
-    <div className="flex flex-col bg-totalwhite w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
+    <div className="flex flex-col bg-white w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
       <Header preset="h2" className="text-center text-red-500 font-bold m-4">
         Color
       </Header>

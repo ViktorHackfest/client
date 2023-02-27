@@ -11,18 +11,26 @@ type BodyProps = {
 };
 
 export const Body = ({ className, children, preset }: BodyProps) => {
-  // if preset contains b
-  const semiBold = preset.includes('b') ? 'font-semibold' : 'font-jakarta-sans';
-  const presetFinal = preset.includes('b') ? preset.replace('b', 'p') : preset;
   return (
     <p
       className={`${
-        presetFinal === 'p1'
-          ? 'text-[1.5rem]'
-          : presetFinal === 'p2'
-          ? 'text-[1rem]'
-          : 'text-[0.75rem]'
-      } ${semiBold} ${className}`}
+        preset === 'b1'
+          ? 'text-[1.5rem]' // 24px
+          : preset === 'b2'
+          ? 'text-[1.25rem]' // 20px
+          : preset === 'b3'
+          ? 'text-[1rem]' // 16px
+          : preset === 'b4'
+          ? 'text-[0.875rem]' // 14px
+          : preset === 'b5'
+          ? 'text-[0.75rem]' // 12px
+          : preset === 'c1'
+          ? 'text-[0.75rem] text-gray-300 font-semibold' // 12px
+          : preset === 'c2'
+          ? 'text-[0.688rem] text-gray-300 font-semibold' // 11px
+          : 'text-[0.625rem] text-gray-300 font-semibold' // 10px
+      } 
+      ${className}`}
     >
       {children}
     </p>
