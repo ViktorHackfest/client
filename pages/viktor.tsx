@@ -106,36 +106,52 @@ function TypographySection() {
           Body - Nunito
         </Header>
         <Card preset="light">
-          <div className="flex gap-8">
+          <div className="flex gap-32">
             <div>b1</div>
+            <div>24px</div>
+            <div>1.5rem</div>
             <Body preset="b1">Lorem ipsum.</Body>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-32">
             <div>b2</div>
+            <div>20px</div>
+            <div>1.25rem</div>
             <Body preset="b2">Lorem ipsum.</Body>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-32">
             <div>b3</div>
+            <div>16px</div>
+            <div>1rem</div>
             <Body preset="b3">Lorem ipsum.</Body>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-32">
             <div>b4</div>
+            <div>14px</div>
+            <div>0.875rem</div>
             <Body preset="b4">Lorem ipsum.</Body>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-32">
             <div>b5</div>
+            <div>12px</div>
+            <div>0.75rem</div>
             <Body preset="b5">Lorem ipsum.</Body>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-32">
             <div>c1</div>
+            <div>12px</div>
+            <div>0.75rem</div>
             <Body preset="c1">Lorem ipsum.</Body>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-32">
             <div>c2</div>
+            <div>11px</div>
+            <div>0.6875rem</div>
             <Body preset="c2">Lorem ipsum.</Body>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-32">
             <div>f&nbsp;&nbsp;</div>
+            <div>10px</div>
+            <div>0.625rem</div>
             <Body preset="f">Lorem ipsum.</Body>
           </div>
         </Card>
@@ -190,7 +206,7 @@ function ToastSection() {
 function ButtonSection() {
   return (
     <div className="flex flex-col bg-white w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
-      <Header preset="h2" className="text-center text-red-500 font-bold m-4">
+      <Header preset="h2" className="text-center font-bold m-4">
         Button
       </Header>
 
@@ -446,7 +462,7 @@ function TextFieldSection() {
 function ColorSection() {
   return (
     <div className="flex flex-col bg-white w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
-      <Header preset="h2" className="text-center text-red-500 font-bold m-4">
+      <Header preset="h2" className="text-center font-bold m-4">
         Color
       </Header>
 
