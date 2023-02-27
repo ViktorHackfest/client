@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+const withReactSvg = require('next-react-svg');
+const path = require('path');
+
+module.exports = withReactSvg({
+  include: path.resolve(__dirname, 'public/assets'),
   images: {
     domains: [
       'localhost',
@@ -9,6 +11,10 @@ const nextConfig = {
       'lh3.googleusercontent.com',
     ],
   },
-};
-
-module.exports = nextConfig;
+  experimental: {
+    esmExternals: false,
+  },
+  webpack(config, options) {
+    return config;
+  },
+});
