@@ -12,7 +12,7 @@ type BodyProps = {
 
 export const Body = ({ className, children, preset }: BodyProps) => {
   return (
-    <p
+    <div
       className={`${
         preset === 'b1'
           ? 'text-[1.5rem]' // 24px
@@ -33,7 +33,7 @@ export const Body = ({ className, children, preset }: BodyProps) => {
       ${className}`}
     >
       {children}
-    </p>
+    </div>
   );
 };
 

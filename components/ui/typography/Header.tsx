@@ -12,7 +12,7 @@ type HeaderProps = {
 
 export const Header = ({ className, preset, children }: HeaderProps) => {
   return (
-    <h1
+    <div
       className={`${
         preset === 't1'
           ? 'text-[4.5rem]' // 72px
@@ -33,7 +33,7 @@ export const Header = ({ className, preset, children }: HeaderProps) => {
       ${className}`}
     >
       {children}
-    </h1>
+    </div>
   );
 };
 
