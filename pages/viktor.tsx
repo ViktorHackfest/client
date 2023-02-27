@@ -132,7 +132,7 @@ const Viktor: NextPage = () => {
           Info
         </button>
       </div>
-      <div className="flex flex-col bg-totalwhite w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-[#ADD1E2]">
+      <div className="flex flex-col bg-totalwhite w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
         <Header preset="h2" className="text-center text-red-500 font-bold m-4">
           Button
         </Header>
