@@ -15,7 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
           content="TripFolk adalah aplikasi tour guide online berbasis mobile yang hadir sebagai solusi untuk menyelesaikan permasalahan dengan mengubungkan turis dan warga lokal."
         />
       </Head>
-      <Component {...pageProps} />
+      <div className="bg-background_global">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </>
   );
