@@ -16,30 +16,25 @@ import { BiSearch } from 'react-icons/bi';
 import { BsChevronDown, BsChevronRight } from 'react-icons/bs';
 
 const Viktor: NextPage = () => {
-  const errorToast = Toast({
-    preset: 'error',
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  });
-  const warningToast = Toast({
-    preset: 'warning',
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  });
-  const successToast = Toast({
-    preset: 'success',
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  });
-  const infoToast = Toast({
-    preset: 'info',
-    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  });
-
-  const errorHandler = () => {
-    console.log('ERROR');
-    errorToast();
-  };
   return (
     <div>
-      <div>Viktor</div>
+      <div className="flex justify-center">
+        <Header preset="t1" className="font-bold m-16">
+          Viktor
+        </Header>
+      </div>
+      {/* <TypographySection /> */}
+      {/* <ToastSection /> */}
+      <ButtonSection />
+      <TextFieldSection />
+      <ColorSection />
+    </div>
+  );
+};
+
+function TypographySection() {
+  return (
+    <>
       <div>Typography</div>
       <div>Header</div>
       <div>
@@ -117,6 +112,34 @@ const Viktor: NextPage = () => {
         </Header>
         <div className="bg-danger-dark">TEST</div>
       </div>
+    </>
+  );
+}
+
+function ToastSection() {
+  const errorToast = Toast({
+    preset: 'error',
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  });
+  const warningToast = Toast({
+    preset: 'warning',
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  });
+  const successToast = Toast({
+    preset: 'success',
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  });
+  const infoToast = Toast({
+    preset: 'info',
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  });
+
+  const errorHandler = () => {
+    console.log('ERROR');
+    errorToast();
+  };
+  return (
+    <>
       <div>Toast</div>
       <div>
         <button onClick={errorHandler} className="bg-danger-light">
@@ -132,12 +155,9 @@ const Viktor: NextPage = () => {
           Info
         </button>
       </div>
-      <ButtonSection />
-      <TextFieldSection />
-      <ColorSection />
-    </div>
+    </>
   );
-};
+}
 
 function ButtonSection() {
   return (
