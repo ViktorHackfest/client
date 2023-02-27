@@ -1,6 +1,7 @@
 import { Checkbox, FormControl, Stack } from '@chakra-ui/react';
 import {
   Button,
+  Card,
   FormLabel,
   Header,
   InputField,
@@ -23,7 +24,7 @@ const Viktor: NextPage = () => {
           Viktor
         </Header>
       </div>
-      {/* <TypographySection /> */}
+      <TypographySection />
       {/* <ToastSection /> */}
       <ButtonSection />
       <TextFieldSection />
@@ -34,85 +35,87 @@ const Viktor: NextPage = () => {
 
 function TypographySection() {
   return (
-    <>
-      <div>Typography</div>
-      <div>Header</div>
-      <div>
-        <Header preset="t1" className="font-bold">
-          Lorem ipsum.
-        </Header>
-        <Header preset="t1" className="font-normal">
-          Lorem ipsum.
-        </Header>
-        <Header preset="t1" className="font-light">
-          Lorem ipsum.
-        </Header>
-        <Header preset="t2" className="font-bold">
-          Lorem ipsum.
-        </Header>
-        <Header preset="t2" className="font-normal">
-          Lorem ipsum.
-        </Header>
-        <Header preset="t2" className="font-light">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h1" className="font-bold">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h1" className="font-normal">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h1" className="font-light">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h2" className="font-bold">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h2" className="font-normal">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h2" className="font-light">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h3" className="font-bold">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h3" className="font-normal">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h3" className="font-light">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h4" className="font-bold">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h4" className="font-normal">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h4" className="font-light">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h5" className="font-bold">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h5" className="font-normal">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h5" className="font-light">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h6" className="font-bold">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h6" className="font-normal">
-          Lorem ipsum.
-        </Header>
-        <Header preset="h6" className="font-light">
-          Lorem ipsum.
-        </Header>
-        <div className="bg-danger-dark">TEST</div>
-      </div>
-    </>
+    <div className="w-[85%] mx-auto mb-16">
+      <Card preset="dark">
+        <div>Typography</div>
+        <div>Header</div>
+        <div>
+          <Header preset="t1" className="font-bold">
+            Lorem ipsum.
+          </Header>
+          <Header preset="t1" className="font-normal">
+            Lorem ipsum.
+          </Header>
+          <Header preset="t1" className="font-light">
+            Lorem ipsum.
+          </Header>
+          <Header preset="t2" className="font-bold">
+            Lorem ipsum.
+          </Header>
+          <Header preset="t2" className="font-normal">
+            Lorem ipsum.
+          </Header>
+          <Header preset="t2" className="font-light">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h1" className="font-bold">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h1" className="font-normal">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h1" className="font-light">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h2" className="font-bold">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h2" className="font-normal">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h2" className="font-light">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h3" className="font-bold">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h3" className="font-normal">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h3" className="font-light">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h4" className="font-bold">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h4" className="font-normal">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h4" className="font-light">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h5" className="font-bold">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h5" className="font-normal">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h5" className="font-light">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h6" className="font-bold">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h6" className="font-normal">
+            Lorem ipsum.
+          </Header>
+          <Header preset="h6" className="font-light">
+            Lorem ipsum.
+          </Header>
+          <div className="bg-danger-dark">TEST</div>
+        </div>
+      </Card>
+    </div>
   );
 }
 
