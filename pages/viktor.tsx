@@ -26,7 +26,7 @@ const Viktor: NextPage = () => {
         </Header>
       </div>
       <TypographySection />
-      {/* <ToastSection /> */}
+      <ToastSection />
       <ButtonSection />
       <TextFieldSection />
       <ColorSection />
@@ -183,23 +183,41 @@ function ToastSection() {
     errorToast();
   };
   return (
-    <>
-      <div>Toast</div>
-      <div>
-        <button onClick={errorHandler} className="bg-danger-light">
+    <div className="flex flex-col bg-white w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200 mb-16">
+      <Header preset="h2" className="text-center font-bold mt-4 mb-10">
+        Toast
+      </Header>
+      <div className="flex justify-between mx-48">
+        <Button
+          preset="text"
+          onClick={errorHandler}
+          className="text-white bg-red-500 px-8"
+        >
           Error
-        </button>
-        <button onClick={() => warningToast()} className="bg-warning-light">
+        </Button>
+        <Button
+          preset="text"
+          onClick={() => warningToast()}
+          className="text-white bg-yellow-500 px-8"
+        >
           Warning
-        </button>
-        <button onClick={() => successToast()} className="bg-success-light">
+        </Button>
+        <Button
+          preset="text"
+          onClick={() => successToast()}
+          className="text-white bg-green-500 px-8"
+        >
           Success
-        </button>
-        <button onClick={() => infoToast()} className="bg-cerulean">
+        </Button>
+        <Button
+          preset="text"
+          onClick={() => infoToast()}
+          className="text-white bg-blue-500 px-8"
+        >
           Info
-        </button>
+        </Button>
       </div>
-    </>
+    </div>
   );
 }
 
