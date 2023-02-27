@@ -44,7 +44,7 @@ export const Navbar = () => {
   else {
     // Logged In User
     return (
-      <div className="flex justify-between border-b-2 border-b-black py-4 px-4">
+      <div className="flex justify-between shadow-xl shadow-red-500/5 py-4 px-4">
         <Image
           src="/assets/images/logo-navbar-tripfolk.svg"
           alt=""
