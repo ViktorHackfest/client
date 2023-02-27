@@ -21,7 +21,7 @@ export const TOAST_PRESETS: ToastPresetProps = {
   error: {
     border: 'rounded-3xl',
     borderWidth: 'border-2',
-    color: 'bg-danger-dark/20 active:bg-danger-light backdrop-blur-sm',
+    color: 'bg-danger-dark active:bg-danger-light backdrop-blur-sm',
     text: 'text-danger-dark',
     borderColor: 'border-danger-dark active:border-danger-dark',
     image: <BsFillExclamationTriangleFill className="w-6 h-6" />,

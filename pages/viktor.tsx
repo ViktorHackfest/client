@@ -18,6 +18,11 @@ const Viktor: NextPage = () => {
     preset: 'info',
     message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   });
+
+  const errorHandler = () => {
+    console.log('ERROR');
+    errorToast();
+  };
   return (
     <div>
       <div>Viktor</div>
@@ -100,7 +105,7 @@ const Viktor: NextPage = () => {
       </div>
       <div>Toast</div>
       <div>
-        <button onClick={() => errorToast()} className="bg-danger-light">
+        <button onClick={errorHandler} className="bg-danger-light">
           Error
         </button>
         <button onClick={() => warningToast()} className="bg-warning-light">
