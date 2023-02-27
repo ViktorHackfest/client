@@ -133,15 +133,15 @@ const Viktor: NextPage = () => {
         </button>
       </div>
       <div className="flex flex-col bg-totalwhite w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-[#ADD1E2]">
-        <Header preset="h2" className="text-center text-denim-dark">
+        <Header preset="h2" className="text-center text-red-500 font-bold m-4">
           Button
         </Header>
 
         <div className="flex flex-wrap justify-evenly items-center gap-8 p-3 text-denim-dark">
-          <Header preset="h5">Primary</Header>
-          <Header preset="h5">Secondary</Header>
-          <Header preset="h5">Tertiary</Header>
-          <Header preset="h5">Link</Header>
+          <Header preset="h6">Primary</Header>
+          <Header preset="h6">Secondary</Header>
+          <Header preset="h6">Tertiary</Header>
+          <Header preset="h6">Link</Header>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-4 p-6">
