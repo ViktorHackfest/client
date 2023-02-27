@@ -12,6 +12,7 @@ type User = {
 
 export const Navbar = () => {
   const router = useRouter();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<User>();
 
   useEffect(() => {
@@ -21,28 +22,47 @@ export const Navbar = () => {
       const [userInfo] = fetchUser();
       console.log(userInfo);
       setUser(userInfo);
+      setIsLoggedIn(true);
     })();
   }, []);
 
-  return (
-    <div className="flex justify-between border-b-2 border-b-black py-4 px-4">
-      <Image
-        src="/assets/images/logo-navbar-tripfolk.svg"
-        alt=""
-        width={100}
-        height={100}
-      />
-      <div className="flex items-center gap-4">
+  if (!isLoggedIn)
+    return (
+      <div className="flex justify-between border-b-2 border-b-black py-4 px-4">
         <Image
-          src={user?.photoURL}
-          className="rounded-full"
+          src="/assets/images/logo-navbar-tripfolk.svg"
           alt=""
-          width={30}
-          height={30}
+          width={100}
+          height={100}
         />
-        <div className="text-lg">Hi, {user?.displayName}</div>
-        <BsList size={26} />
+        <div className="flex items-center gap-4">
+          <div className="text-lg">Hi, Guest!</div>
+          <BsList size={26} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  else {
+    // Logged In User
+    return (
+      <div className="flex justify-between border-b-2 border-b-black py-4 px-4">
+        <Image
+          src="/assets/images/logo-navbar-tripfolk.svg"
+          alt=""
+          width={100}
+          height={100}
+        />
+        <div className="flex items-center gap-4">
+          <Image
+            src={user?.photoURL}
+            className="rounded-full"
+            alt=""
+            width={30}
+            height={30}
+          />
+          <div className="text-lg">Hi, {user?.displayName}</div>
+          <BsList size={26} />
+        </div>
+      </div>
+    );
+  }
 };
