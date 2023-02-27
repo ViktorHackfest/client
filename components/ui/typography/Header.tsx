@@ -1,48 +1,51 @@
 import { WindowSize } from '@components/hooks/';
-import { responsive } from '@utils/layout';
 import { ReactNode } from 'react';
+import { responsive } from 'utils';
 
-type HeaderPreset =
-  | 'decorative'
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'h6'
-  | 'h7';
+type HeaderPreset = 't1' | 't2' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type HeaderWeight = 'bold' | 'regular' | 'light';
 
 type HeaderProps = {
   className?: string;
   preset: HeaderPreset;
   children: ReactNode;
-  decorative?: boolean;
+  weight: HeaderWeight;
 };
 
 export const Header = ({
   className,
   preset,
   children,
-  decorative,
+  weight,
 }: HeaderProps) => {
   return (
     <h1
       className={`${
-        preset === 'h1'
-          ? 'font-bold text-[4rem]'
+        preset === 't1'
+          ? 'text-[4.5rem]' // 72px
+          : preset === 't2'
+          ? 'text-[3.75rem]' // 60 px
+          : preset === 'h1'
+          ? 'text-[3rem]' // 48 px
           : preset === 'h2'
-          ? 'font-bold text-[3rem]'
+          ? 'text-[2.25rem]' // 36 px
           : preset === 'h3'
-          ? 'font-bold text-[2rem]'
+          ? 'text-[2rem]' // 32 px
           : preset === 'h4'
-          ? 'font-bold text-[1.5rem]'
+          ? 'text-[1.75rem]' // 28 px
           : preset === 'h5'
-          ? 'font-bold text-[1.25rem]'
-          : preset === 'h6'
-          ? 'font-bold text-[1rem]'
-          : 'font-bold text-[0.75rem]'
+          ? 'text-[1.5rem]' // 24 px
+          : 'text-[1.25rem]' // 20 px (h6)
       }
-      ${decorative ? 'tracking-[0.03em] decorative' : ''}
+      
+      ${
+        weight === 'bold'
+          ? 'font-bold'
+          : weight === 'regular'
+          ? 'font-normal'
+          : 'font-light'
+      }}
+      
       ${className}`}
     >
       {children}
@@ -51,7 +54,6 @@ export const Header = ({
 };
 
 interface HeaderResponsiveProps extends HeaderProps {
-  presetTablet?: HeaderPreset;
   presetDesktop?: HeaderPreset;
   windowSize: WindowSize;
 }
@@ -60,7 +62,6 @@ interface HeaderResponsiveProps extends HeaderProps {
 // see example in pages/arutala.tsx
 export const HeaderResponsive = ({
   preset,
-  presetTablet,
   presetDesktop,
   windowSize,
   ...props
@@ -68,8 +69,10 @@ export const HeaderResponsive = ({
   const presetResponsive = responsive<HeaderPreset>(
     windowSize,
     preset,
-    presetTablet,
     presetDesktop
   );
   return <Header preset={presetResponsive} {...props} />;
 };
+
+// References
+// https://nekocalc.com/px-to-rem-converter

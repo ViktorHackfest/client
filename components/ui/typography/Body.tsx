@@ -2,7 +2,7 @@ import { WindowSize } from '@hooks';
 import { responsive } from '@utils';
 import { ReactNode } from 'react';
 
-type BodyPreset = 'p1' | 'p2' | 'p3' | 'b1' | 'b2' | 'b3';
+type BodyPreset = 'b1' | 'b2' | 'b3' | 'b4' | 'b5' | 'c1' | 'c2' | 'f';
 
 type BodyProps = {
   className?: string;
