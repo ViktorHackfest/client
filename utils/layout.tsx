@@ -5,7 +5,6 @@ import { VIEWPORTS } from '@constants';
 export function responsive<Type>(
   windowSize: WindowSize,
   mobile: Type,
-  tablet?: Type,
   desktop?: Type
 ): Type {
   let value: Type;

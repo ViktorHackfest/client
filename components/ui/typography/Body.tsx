@@ -39,7 +39,6 @@ interface BodyResponsiveProps extends BodyProps {
 /** Body having presets that changes according to viewport */
 export const BodyResponsive = ({
   preset,
-  presetTablet,
   presetDesktop,
   windowSize,
   ...props
@@ -47,7 +46,6 @@ export const BodyResponsive = ({
   const presetResponsive = responsive<BodyPreset>(
     windowSize,
     preset,
-    presetTablet,
     presetDesktop
   );
   return <Body preset={presetResponsive} {...props} />;

@@ -3,21 +3,14 @@ import { ReactNode } from 'react';
 import { responsive } from 'utils';
 
 type HeaderPreset = 't1' | 't2' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-type HeaderWeight = 'bold' | 'regular' | 'light';
 
 type HeaderProps = {
   className?: string;
   preset: HeaderPreset;
   children: ReactNode;
-  weight: HeaderWeight;
 };
 
-export const Header = ({
-  className,
-  preset,
-  children,
-  weight,
-}: HeaderProps) => {
+export const Header = ({ className, preset, children }: HeaderProps) => {
   return (
     <h1
       className={`${
@@ -37,15 +30,6 @@ export const Header = ({
           ? 'text-[1.5rem]' // 24 px
           : 'text-[1.25rem]' // 20 px (h6)
       }
-      
-      ${
-        weight === 'bold'
-          ? 'font-bold'
-          : weight === 'regular'
-          ? 'font-normal'
-          : 'font-light'
-      }}
-      
       ${className}`}
     >
       {children}

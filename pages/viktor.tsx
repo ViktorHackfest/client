@@ -8,22 +8,76 @@ const Viktor: NextPage = () => {
       <div>Typography</div>
       <div>Header</div>
       <div>
-        <Header preset="t1" weight="bold">
+        <Header preset="t1" className="font-bold">
           Lorem ipsum.
         </Header>
-        <Header preset="t1" weight="regular">
+        <Header preset="t1" className="font-normal">
           Lorem ipsum.
         </Header>
-        <Header preset="t1" weight="light">
+        <Header preset="t1" className="font-light">
           Lorem ipsum.
         </Header>
-        <Header preset="t2" weight="bold">
+        <Header preset="t2" className="font-bold">
           Lorem ipsum.
         </Header>
-        <Header preset="t2" weight="regular">
+        <Header preset="t2" className="font-normal">
           Lorem ipsum.
         </Header>
-        <Header preset="t2" weight="light">
+        <Header preset="t2" className="font-light">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h1" className="font-bold">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h1" className="font-normal">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h1" className="font-light">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h2" className="font-bold">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h2" className="font-normal">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h2" className="font-light">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h3" className="font-bold">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h3" className="font-normal">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h3" className="font-light">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h4" className="font-bold">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h4" className="font-normal">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h4" className="font-light">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h5" className="font-bold">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h5" className="font-normal">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h5" className="font-light">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h6" className="font-bold">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h6" className="font-normal">
+          Lorem ipsum.
+        </Header>
+        <Header preset="h6" className="font-light">
           Lorem ipsum.
         </Header>
       </div>
