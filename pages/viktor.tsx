@@ -1,7 +1,23 @@
-import { Header } from '@ui';
+import { Header, Toast } from '@ui';
 import { NextPage } from 'next';
 
 const Viktor: NextPage = () => {
+  const errorToast = Toast({
+    preset: 'error',
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  });
+  const warningToast = Toast({
+    preset: 'warning',
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  });
+  const successToast = Toast({
+    preset: 'success',
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  });
+  const infoToast = Toast({
+    preset: 'info',
+    message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  });
   return (
     <div>
       <div>Viktor</div>
@@ -81,6 +97,21 @@ const Viktor: NextPage = () => {
           Lorem ipsum.
         </Header>
         <div className="bg-danger-dark">TEST</div>
+      </div>
+      <div>Toast</div>
+      <div>
+        <button onClick={() => errorToast()} className="bg-danger-light">
+          Error
+        </button>
+        <button onClick={() => warningToast()} className="bg-warning-light">
+          Warning
+        </button>
+        <button onClick={() => successToast()} className="bg-success-light">
+          Success
+        </button>
+        <button onClick={() => infoToast()} className="bg-cerulean">
+          Info
+        </button>
       </div>
     </div>
   );

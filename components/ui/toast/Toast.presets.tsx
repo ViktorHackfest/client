@@ -1,10 +1,4 @@
-import {
-  CheckCircleIcon,
-  ExclamationCircleIcon,
-  ExclamationIcon,
-  InformationCircleIcon,
-} from '@heroicons/react/outline';
-import React from 'react';
+// import {
 
 type ToastStyleProps = {
   color: string;
@@ -12,7 +6,6 @@ type ToastStyleProps = {
   border: string;
   borderWidth: string;
   borderColor: string;
-  image: React.SVGAttributes<SVGElement>;
 };
 
 type ToastPresetProps = {
@@ -26,7 +19,6 @@ export const TOAST_PRESETS: ToastPresetProps = {
     color: 'bg-danger-dark/20 active:bg-danger-light backdrop-blur-sm',
     text: 'text-danger-dark',
     borderColor: 'border-danger-dark active:border-danger-dark',
-    image: <ExclamationIcon className="w-6 h-6" />,
   },
   warning: {
     border: 'rounded-3xl',
@@ -34,7 +26,6 @@ export const TOAST_PRESETS: ToastPresetProps = {
     color: 'bg-warning-dark/20 active:bg-warning-light backdrop-blur-sm',
     text: 'text-warning-dark',
     borderColor: 'border-warning-dark active:border-warning-dark',
-    image: <ExclamationCircleIcon className="w-6 h-6" />,
   },
   success: {
     border: 'rounded-3xl',
@@ -42,7 +33,6 @@ export const TOAST_PRESETS: ToastPresetProps = {
     color: 'bg-success-dark/20 active:bg-success-dark backdrop-blur-sm',
     text: 'text-success-dark',
     borderColor: 'border-success-dark active:border-success-dark',
-    image: <CheckCircleIcon className="w-6 h-6" />,
   },
   info: {
     border: 'rounded-3xl',
@@ -50,6 +40,5 @@ export const TOAST_PRESETS: ToastPresetProps = {
     color: 'bg-cerulean/20 active:bg-cerulean backdrop-blur-sm',
     text: 'text-cerulean',
     borderColor: 'border-cerulean active:border-cerulean',
-    image: <InformationCircleIcon className="w-6 h-6" />,
   },
 };

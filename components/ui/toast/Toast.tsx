@@ -1,7 +1,8 @@
 import { Box, useToast } from '@chakra-ui/react';
-import { Header } from '@components';
-import { XIcon } from '@heroicons/react/outline';
+import { Header } from '@ui';
+import Image from 'next/image';
 import React from 'react';
+import { GrClose } from 'react-icons/gr';
 import { TOAST_PRESETS } from './Toast.presets';
 
 export type ToastProps = {
@@ -25,10 +26,17 @@ export const Toast = ({ preset, message }: ToastProps) => {
           ${TOAST_PRESETS[preset].color}`}
         >
           <>
-            {TOAST_PRESETS[preset].image}
+            {preset === 'error' && (
+              <Image
+                src="/icons/error.svg"
+                alt="Error"
+                width={24}
+                height={24}
+              />
+            )}
             <Header preset="h6">{message}</Header>
             <button onClick={onClose}>
-              <XIcon className="h-6 w-6" />
+              <GrClose className="h-6 w-6" />
             </button>
           </>
         </Box>
