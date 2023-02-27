@@ -27,7 +27,9 @@
       "@ui/*": ["components/ui/*"],
       "@ui": ["components/ui"],
       "@services": ["services"],
-      "@services/*": ["services/*"]
+      "@services/*": ["services/*"],
+      "@images": ["public/assets/images"],
+      "@images/*": ["public/assets/images/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
