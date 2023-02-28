@@ -3,6 +3,7 @@ import {
   Body,
   Button,
   Card,
+  Chips,
   Datepicker,
   FormLabel,
   Header,
@@ -32,6 +33,7 @@ const Viktor: NextPage = () => {
       <TextFieldSection />
       <ColorSection />
       <DatepickerSection />
+      <ChipsSection />
     </div>
   );
 };
@@ -568,6 +570,34 @@ function DatepickerSection() {
       </Header>
       <div className="flex justify-center">
         <Datepicker id="birthday" name="birthday" />
+      </div>
+    </div>
+  );
+}
+
+function ChipsSection() {
+  return (
+    <div className="flex flex-col bg-white w-[90%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
+      <Header preset="h2" className="text-center font-bold m-4">
+        Chips
+      </Header>
+
+      <div className="flex flex-wrap justify-evenly items-center gap-8 p-3 text-denim-dark">
+        <Header preset="h6">Success</Header>
+        <Header preset="h6">Info</Header>
+        <Header preset="h6">Warning</Header>
+        <Header preset="h6">Danger</Header>
+        <Header preset="h6">Default</Header>
+        <Header preset="h6">Input</Header>
+      </div>
+
+      <div className="flex flex-wrap justify-center items-center gap-20 p-6">
+        <Chips preset="success">Success</Chips>
+        <Chips preset="info">Info</Chips>
+        <Chips preset="warning">Warning</Chips>
+        <Chips preset="danger">Danger</Chips>
+        <Chips preset="default">Default</Chips>
+        <Chips preset="input">Input</Chips>
       </div>
     </div>
   );
