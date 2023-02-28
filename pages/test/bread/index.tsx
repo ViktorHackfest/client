@@ -2,7 +2,7 @@ import { Breadcrumb } from '@components/ui';
 import type { NextPage } from 'next';
 
 const Bread: NextPage = () => {
-  return <Breadcrumb path={['test', 'bread']} />;
+  return <Breadcrumb path={['Test', 'Bread']} />;
 };
 
 export default Bread;
