@@ -7,7 +7,6 @@ import {
   FormLabel,
   Header,
   InputField,
-  Section,
   SelectField,
   Toast,
 } from '@ui';
@@ -431,7 +430,7 @@ function TextFieldSection() {
     </SelectField>
   );
   return (
-    <Section>
+    <div className="flex flex-col bg-white w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200 my-16">
       <Header preset="h2" className="text-center text-denim-dark">
         TextField
       </Header>
@@ -471,7 +470,7 @@ function TextFieldSection() {
           {selectElement}
         </div>
       </div>
-    </Section>
+    </div>
   );
 }
 
