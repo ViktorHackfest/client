@@ -34,6 +34,7 @@ const Viktor: NextPage = () => {
       <ColorSection />
       <DatepickerSection />
       <ChipsSection />
+      <div className="h-32"></div>
     </div>
   );
 };
