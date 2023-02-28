@@ -1,6 +1,7 @@
 import { Checkbox, FormControl, Stack } from '@chakra-ui/react';
 import {
   Body,
+  Breadcrumb,
   Button,
   Card,
   Chips,
@@ -21,6 +22,7 @@ import { BsChevronDown, BsChevronRight } from 'react-icons/bs';
 const Viktor: NextPage = () => {
   return (
     <div>
+      <Breadcrumb path={['viktor']} />
       <div className="flex justify-center">
         <Header preset="t1" className="font-bold m-16">
           Viktor
