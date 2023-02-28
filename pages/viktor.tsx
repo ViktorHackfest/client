@@ -7,9 +7,11 @@ import {
   Card,
   Chips,
   Datepicker,
+  Footer,
   FormLabel,
   Header,
   InputField,
+  Navbar,
   SelectField,
   Toast,
 } from '@ui';
@@ -22,23 +24,27 @@ import { BsChevronDown, BsChevronRight } from 'react-icons/bs';
 
 const Viktor: NextPage = () => {
   return (
-    <div>
-      <Breadcrumb path={['Viktor Design System']} />
-      <div className="flex justify-center">
-        <Header preset="t1" className="font-bold m-16">
-          Viktor
-        </Header>
+    <>
+      <Navbar />
+      <div>
+        <Breadcrumb path={['Viktor Design System']} />
+        <div className="flex justify-center">
+          <Header preset="t1" className="font-bold m-16">
+            Viktor
+          </Header>
+        </div>
+        <TypographySection />
+        <ToastSection />
+        {/* <ToastExample /> */}
+        <ButtonSection />
+        <TextFieldSection />
+        <ColorSection />
+        <DatepickerSection />
+        <ChipsSection />
+        <div className="h-32"></div>
       </div>
-      <TypographySection />
-      <ToastSection />
-      {/* <ToastExample /> */}
-      <ButtonSection />
-      <TextFieldSection />
-      <ColorSection />
-      <DatepickerSection />
-      <ChipsSection />
-      <div className="h-32"></div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
