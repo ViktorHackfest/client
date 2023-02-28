@@ -1,3 +1,4 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import { Footer, Navbar } from '@components/ui';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -5,7 +6,7 @@ import '../styles/styles.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ChakraProvider>
       <Navbar />
       <Head>
         <title>TripFolk</title>
@@ -19,6 +20,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </div>
       <Footer />
-    </>
+    </ChakraProvider>
   );
 }
