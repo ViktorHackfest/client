@@ -32,7 +32,7 @@ const Viktor: NextPage = () => {
       <ButtonSection />
       <TextFieldSection />
       <ColorSection />
-      <Datepicker id="birthday" name="birthday" />
+      <DatepickerSection />
     </div>
   );
 };
@@ -556,6 +556,19 @@ function ColorSection() {
         <div className="bg-pink-300 p-4">pink-300</div>
         <div className="bg-pink-400 p-4">pink-400</div>
         <div className="bg-pink-500 p-4">pink-500</div>
+      </div>
+    </div>
+  );
+}
+
+function DatepickerSection() {
+  return (
+    <div className="flex flex-col bg-white w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200 my-16">
+      <Header preset="h2" className="text-center font-bold m-4">
+        Datepicker
+      </Header>
+      <div className="flex justify-center">
+        <Datepicker id="birthday" name="birthday" />
       </div>
     </div>
   );
