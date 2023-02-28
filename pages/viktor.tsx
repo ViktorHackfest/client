@@ -220,7 +220,7 @@ function ToastSection() {
 
 function ButtonSection() {
   return (
-    <div className="flex flex-col bg-white w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
+    <div className="flex flex-col bg-white w-[90%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200">
       <Header preset="h2" className="text-center font-bold m-4">
         Button
       </Header>
