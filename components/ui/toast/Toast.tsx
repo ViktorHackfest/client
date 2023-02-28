@@ -19,7 +19,7 @@ export const Toast = ({ preset, message }: ToastProps) => {
       return (
         <Box
           className={`
-          transition-all flex justify-between items-center gap-2 py-3 px-5
+          transition-all flex justify-between items-center gap-2 py-6 px-8
           ${TOAST_PRESETS[preset].text} md:text-base text-sm font-semibold 
           ${TOAST_PRESETS[preset].border} 
           ${TOAST_PRESETS[preset].borderWidth} 

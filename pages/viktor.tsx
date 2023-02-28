@@ -179,11 +179,6 @@ function ToastSection() {
     preset: 'info',
     message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   });
-
-  const errorHandler = () => {
-    console.log('ERROR');
-    errorToast();
-  };
   return (
     <div className="flex flex-col bg-white w-[85%] mx-auto rounded-3xl p-10 shadow-lg shadow-red-200 mb-16">
       <Header preset="h2" className="text-center font-bold mt-4 mb-10">
@@ -192,7 +187,7 @@ function ToastSection() {
       <div className="flex justify-between mx-48">
         <Button
           preset="text"
-          onClick={errorHandler}
+          onClick={() => errorToast()}
           className="text-white bg-red-500 px-8"
         >
           Error
