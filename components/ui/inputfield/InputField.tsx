@@ -38,14 +38,14 @@ export const InputField = (props: InputFieldProps) => {
   return (
     <FormControl
       isInvalid={props.isError}
-      className={`${props.dark ? 'text-powder-light' : 'text-denim-light'} ${
+      className={`${props.dark ? 'text-red-200' : 'text-black'} ${
         props.className
       }`}
     >
       <FormLabel>
         {props.label}
         {props.label && props.required && (
-          <span className="text-danger-light">*</span>
+          <span className="text-red-200">*</span>
         )}
       </FormLabel>
       <InputGroup>
@@ -61,7 +61,7 @@ export const InputField = (props: InputFieldProps) => {
           placeholder={props.placeholder}
           onChange={props.onChange}
           isDisabled={props.isDisabled}
-          className={`font-jakarta-sans hover:border-cerulean ${props.innerClassName}`}
+          className={`font-nunito hover:border-blue-400 ${props.innerClassName}`}
           style={{ colorScheme: props.dark ? 'dark' : 'normal' }}
           required={props.required}
           onBlur={props.onBlur}

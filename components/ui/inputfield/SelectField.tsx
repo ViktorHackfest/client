@@ -38,14 +38,14 @@ export const SelectField = (props: SelectFieldProps) => {
   return (
     <FormControl
       isInvalid={props.isError}
-      className={`${props.dark ? 'text-powder-light' : 'text-denim-light'} ${
+      className={`${props.dark ? 'text-red-200' : 'text-black'} ${
         props.className
       }`}
     >
       <FormLabel>
         {props.label}
         {props.label && props.required && (
-          <span className="text-danger-light">*</span>
+          <span className="text-red-200">*</span>
         )}
       </FormLabel>
       <Select
@@ -54,7 +54,7 @@ export const SelectField = (props: SelectFieldProps) => {
         onChange={props.onChange}
         onBlur={props.onBlur}
         isDisabled={props.isDisabled}
-        className={`cursor-pointer font-jakarta-sans ${props.innerClassName}`}
+        className={`cursor-pointer font-nunito ${props.innerClassName}`}
         icon={props.rightIcon}
         iconSize="17"
         value={props.value}
