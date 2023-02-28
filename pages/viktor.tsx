@@ -1,9 +1,9 @@
 import { Checkbox, FormControl, Stack } from '@chakra-ui/react';
-import { ToastExample } from '@components/ui/toast/Check';
 import {
   Body,
   Button,
   Card,
+  Datepicker,
   FormLabel,
   Header,
   InputField,
@@ -28,10 +28,11 @@ const Viktor: NextPage = () => {
       </div>
       <TypographySection />
       <ToastSection />
+      {/* <ToastExample /> */}
       <ButtonSection />
       <TextFieldSection />
       <ColorSection />
-      <ToastExample />
+      <Datepicker id="birthday" name="birthday" />
     </div>
   );
 };
