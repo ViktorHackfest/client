@@ -1,5 +1,6 @@
 import { Footer, Navbar } from '@ui';
 import { fetchUser, userAccessToken } from '@utils/fetchGoogleAuth';
+import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -11,7 +12,7 @@ type User = {
   email: string;
 };
 
-export default function Logout() {
+const Logout: NextPage = () => {
   const router = useRouter();
   const [user, setUser] = useState<User>();
 
@@ -58,4 +59,6 @@ export default function Logout() {
       <Footer />
     </>
   );
-}
+};
+
+export default Logout;

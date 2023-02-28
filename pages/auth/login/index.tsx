@@ -37,7 +37,7 @@ const Login: NextPage = () => {
         <div className="top-0 left-0 right-0 bottom-0 absolute bg-black opacity-10"></div>
         <div className="flex justify-center items-center z-10 px-24">
           <div>
-            <div className="flex justify-center text-white font-bold text-3xl m-6">
+            <div className="flex justify-center text-white font-bold text-5xl m-6">
               TripFolk
             </div>
             <div className="text-white/80 border-2 border-white/20 p-8 rounded-2xl">
