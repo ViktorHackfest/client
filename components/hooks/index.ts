@@ -1,2 +1,1 @@
-export * from './UseExample';
-export * from './UseWindowSize';
+export * from './useWindowSize';
