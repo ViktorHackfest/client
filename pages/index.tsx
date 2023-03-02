@@ -1,56 +1,45 @@
-import { fetchUser, userAccessToken } from '@utils/fetchGoogleAuth';
+import { Button } from '@components/ui';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { IoLogOut } from 'react-icons/io5';
-
-type User = {
-  photoURL: string;
-  displayName: string;
-  email: string;
-};
 
 export default function Home() {
   const router = useRouter();
-  const [user, setUser] = useState<User>();
-
-  useEffect(() => {
-    (async () => {
-      const accessToken = userAccessToken();
-      if (!accessToken) return router.push('/auth/login');
-      const [userInfo] = fetchUser();
-      console.log(userInfo);
-      setUser(userInfo);
-    })();
-  }, []);
-
-  const logout = () => {
-    localStorage.clear();
+  const routeToLogin = () => {
     router.push('/auth/login');
   };
-
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-slate-100">
-      <div className="w-1/3 h-auto p-4 bg-white shadow-md rounded-md flex justify-start items-center relative">
-        <IoLogOut
-          fontSize={25}
-          className="absolute top-3 right-3 cursor-pointer text-gray-600"
-          onClick={logout}
-        />
+    <>
+      <div className="w-screen h-screen flex justify-center items-center bg-slate-800 relative">
         <Image
-          src={user?.photoURL}
-          className="rounded-md shadow-md"
-          alt=""
+          src="/assets/images/auth-started.svg"
           width={100}
           height={100}
+          alt=""
+          className="absolute top-0 left-0 w-screen h-screen object-cover"
         />
-        <p className="text-2xl font-sans font-semibold ml-2">
-          {user?.displayName}
-          <span className="block text-xs font-serif font-normal">
-            {user?.email}
-          </span>
-        </p>
+        <div className="top-0 left-0 right-0 bottom-0 absolute bg-black opacity-10"></div>
+        <div className="flex justify-center items-center z-10">
+          <div>
+            <div className="flex justify-center text-white font-semibold text-5xl m-6 text-center">
+              Let&#8217;s Discover
+            </div>
+            <div className="flex justify-center text-white font-semibold text-5xl m-6 text-center">
+              Indonesia
+            </div>
+            <div className="h-[26rem]"></div>
+            <div className="flex justify-center">
+              <Button
+                preset="primary"
+                onClick={routeToLogin}
+                className="scale-125 text-white"
+              >
+                Start Exploring
+              </Button>
+            </div>
+            <div className="h-20"></div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
