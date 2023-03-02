@@ -42,7 +42,7 @@ const Logout: NextPage = () => {
             onClick={logout}
           />
           <Image
-            src={user?.photoURL}
+            src={user?.photoURL!}
             className="rounded-md shadow-md"
             alt=""
             width={100}

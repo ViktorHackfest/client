@@ -53,7 +53,7 @@ export const Navbar = () => {
         />
         <div className="flex items-center gap-4">
           <Image
-            src={user?.photoURL}
+            src={user?.photoURL!}
             className="rounded-full"
             alt=""
             width={30}
