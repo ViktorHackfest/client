@@ -6,6 +6,7 @@ export * from './datepicker';
 export * from './footer';
 export * from './inputfield';
 export * from './navbar';
+export * from './screen';
 export * from './section';
 export * from './sidebar';
 export * from './toast';

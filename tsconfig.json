@@ -29,7 +29,9 @@
       "@services": ["services"],
       "@services/*": ["services/*"],
       "@images": ["public/assets/images"],
-      "@images/*": ["public/assets/images/*"]
+      "@images/*": ["public/assets/images/*"],
+      "@models/": ["models"],
+      "@models/*": ["models/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
