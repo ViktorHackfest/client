@@ -1,3 +1,4 @@
+import { CitiesContainer } from '@components/modules/travel/cities';
 import { City } from '@models/City';
 import { LoadingScreen } from '@ui';
 import axios from 'axios';
@@ -19,7 +20,7 @@ const Cities: NextPage = () => {
   if (citiesLoading) {
     return <LoadingScreen />;
   } else {
-    return <div>TEST API</div>;
+    return <CitiesContainer cities={cities} />;
   }
 };
 
