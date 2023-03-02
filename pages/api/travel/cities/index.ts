@@ -5,18 +5,19 @@ import axios from 'axios';
 
 export default function handler(_: NextApiRequest, res: NextApiResponse) {
   axios
-    .get(`${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/cities`)
+    .get(`${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/cities/`)
     .then((response) => {
+      // console.log(response.data);
       try {
         res.status(200).json(
-          response.data.data.map(
+          response.data.map(
             (city: any) =>
               ({
                 id: city.id,
-                name: city.attributes.name,
-                province: city.attributes.province,
-                lat: city.attributes.lat,
-                lng: city.attributes.lng,
+                name: city.name,
+                province: city.province,
+                lat: city.lat,
+                lng: city.lng,
               } as City)
           )
         );

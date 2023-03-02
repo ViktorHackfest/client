@@ -13,7 +13,7 @@ const Cities: NextPage = () => {
     axios.get('/api/travel/cities').then((response) => {
       setCities(response.data);
       setCitiesLoading(false);
-      console.log(cities);
+      console.log(response.data);
     });
   }, []);
 
