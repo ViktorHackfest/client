@@ -5,7 +5,7 @@ import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
 const Cities: NextPage = () => {
-  // GET : api/articles
+  // GET : api/travel/cities
   const [cities, setCities] = useState<City>();
   const [citiesLoading, setCitiesLoading] = useState(true);
 
@@ -13,7 +13,6 @@ const Cities: NextPage = () => {
     axios.get('/api/travel/cities').then((response) => {
       setCities(response.data);
       setCitiesLoading(false);
-      console.log(response.data);
     });
   }, []);
 
