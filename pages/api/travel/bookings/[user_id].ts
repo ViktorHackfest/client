@@ -4,7 +4,7 @@ import { Booking } from '@models/Booking';
 import axios from 'axios';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  console.log(req.query);
+  console.log(req.query.user_id);
   let config = {
     headers: {
       'X-Firebase-ID': req.query.user_id,
