@@ -9,8 +9,6 @@ import { useEffect, useState } from 'react';
 // IF EXIST THEN GET DATA
 
 export const useAuthBackend = () => {
-  const [allTraveler, setAllTraveler] = useState<Traveler[]>([]);
-  // const [isRegistered, setIsRegistered] = useState(false);
   const router = useRouter();
   // Sementara ini ke Traveler dulu nanti dihandle ke User yang punya
   // attribute role traveler dan tour guide
@@ -21,13 +19,13 @@ export const useAuthBackend = () => {
 
   const successToast = Toast({
     preset: 'success',
-    message: 'Berhasil registrasi!',
+    message: 'Succes Registration!',
   });
   const errorConflictToast = Toast({
     preset: 'error',
-    message: 'Gagal registrasi! Anda sudah pernah registrasi sebelumnya.',
+    message: 'Fail Registration! you have previously registered.',
   });
-  const errorToast = Toast({ preset: 'error', message: 'Gagal registrasi!' });
+  const errorToast = Toast({ preset: 'error', message: 'Fail registration!' });
 
   const showRegistrationResult = (responseStatusCode: number) => {
     if (responseStatusCode == 200) {
@@ -67,13 +65,12 @@ export const useAuthBackend = () => {
           })
           .catch((error) => {
             console.log(error);
-            showRegistrationResult(error.response.status);
+            // showRegistrationResult(error.response.status);
           });
       };
 
       // GET USER FROM BACKEND
       axios.get('/api/user/traveler').then((response) => {
-        setAllTraveler(response.data);
         // Jika sudah ada di database maka langsung ambil data
         let isRegistered = false;
         for (let t of response.data) {
