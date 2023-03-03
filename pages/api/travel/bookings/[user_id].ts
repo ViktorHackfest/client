@@ -4,12 +4,10 @@ import { Booking } from '@models/Booking';
 import axios from 'axios';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const userInfo = localStorage.getItem('user');
-  const { user_id } = req.query;
-  console.log(userInfo);
+  console.log(req.query);
   let config = {
     headers: {
-      HTTP_X_FIREBASE_ID: user_id,
+      'X-Firebase-ID': req.query.user_id,
     },
   };
   if (req.method === 'GET') {

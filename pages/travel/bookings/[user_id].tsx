@@ -21,7 +21,7 @@ const BookingByUserId: NextPage = () => {
       setbookingsLoading(false);
       if (response.data.length === 0) setIsEmpty(true);
     });
-  }, []);
+  }, [user_id]);
 
   if (bookingsLoading) {
     return <LoadingScreen />;
