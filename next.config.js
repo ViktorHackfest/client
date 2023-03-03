@@ -4,9 +4,10 @@ const nextConfig = {
   images: {
     domains: [
       'localhost',
+      'lh3.googleusercontent.com',
+      'storage.googleapis.com',
       'cdn.pixabay.com',
       'i.pinimg.com',
-      'lh3.googleusercontent.com',
     ],
   },
 };

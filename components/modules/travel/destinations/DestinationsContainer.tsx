@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 type DestinationsContainerProps = {
   destinations: any;
 };
@@ -19,7 +21,14 @@ export const DestinationsContainer = ({
             <div>{destination.city.lng}</div>
           </div>
           <div>{destination.description}</div>
-          <div>{destination.image}</div>
+          <div>
+            <Image
+              src={destination.image}
+              alt="Destination Photo"
+              width={100}
+              height={100}
+            />
+          </div>
         </div>
       ))}
     </div>
