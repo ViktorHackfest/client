@@ -9,17 +9,20 @@ const Destinations: NextPage = () => {
   // GET : api/travel/destinations
   const [destinations, setDestinations] = useState<Destination>();
   const [destinationsLoading, setDestinationsLoading] = useState(true);
+  const [isEmpty, setIsEmpty] = useState(false);
 
   useEffect(() => {
     axios.get('/api/travel/destinations').then((response) => {
       setDestinations(response.data);
       setDestinationsLoading(false);
+      if (response.data.length === 0) setIsEmpty(true);
     });
   }, []);
 
   if (destinationsLoading) {
     return <LoadingScreen />;
   } else {
+    if (isEmpty) return <div>There are no destinations</div>;
     return <DestinationsContainer destinations={destinations} />;
   }
 };

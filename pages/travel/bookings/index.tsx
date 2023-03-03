@@ -9,17 +9,20 @@ const Bookings: NextPage = () => {
   // GET : api/travel/bookings
   const [bookings, setbookings] = useState<Booking>();
   const [bookingsLoading, setbookingsLoading] = useState(true);
+  const [isEmpty, setIsEmpty] = useState(false);
 
   useEffect(() => {
     axios.get('/api/travel/bookings').then((response) => {
       setbookings(response.data);
       setbookingsLoading(false);
+      if (response.data.length === 0) setIsEmpty(true);
     });
   }, []);
 
   if (bookingsLoading) {
     return <LoadingScreen />;
   } else {
+    if (isEmpty) return <div>There are no bookings</div>;
     return <BookingsContainer bookings={bookings} />;
   }
 };
