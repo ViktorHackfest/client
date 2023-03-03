@@ -14,12 +14,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         try {
           res.status(200).json(
             response.data.map(
-              (city: any) =>
+              (destination: any) =>
                 ({
-                  id: city.id,
-                  name: city.name,
-                  city: city.city,
-                  description: city.description,
+                  id: destination.id,
+                  name: destination.name,
+                  city: destination.city,
+                  description: destination.description,
                 } as Destination)
             )
           );

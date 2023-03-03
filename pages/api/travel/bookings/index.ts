@@ -14,16 +14,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         try {
           res.status(200).json(
             response.data.map(
-              (city: any) =>
+              (booking: any) =>
                 ({
-                  id: city.id,
-                  traveler: city.traveler,
-                  tour_guide: city.tour_guide,
-                  start_date: city.start_date,
-                  end_date: city.end_date,
-                  price: city.price,
-                  is_offline: city.is_offline,
-                  status: city.status,
+                  id: booking.id,
+                  traveler: booking.traveler,
+                  tour_guide: booking.tour_guide,
+                  start_date: booking.start_date,
+                  end_date: booking.end_date,
+                  price: booking.price,
+                  is_offline: booking.is_offline,
+                  status: booking.status,
                 } as Booking)
             )
           );
