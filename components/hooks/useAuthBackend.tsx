@@ -37,6 +37,7 @@ export const useAuthBackend = () => {
     return errorToast();
   };
 
+  // SUCCESS BUT DOUBLING
   useEffect(() => {
     (async () => {
       // Handler to call on window resize
