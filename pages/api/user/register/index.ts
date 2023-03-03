@@ -11,13 +11,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   const { data } = req.body;
+  console.log(data);
+  const parameters = req.query;
+  console.log(parameters);
 
   axios
     .post(
       `${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/user/register/`,
       {
-        data: data,
-      }
+        id: data.id,
+        money: data.money,
+      },
+      { params: parameters }
     )
     .then((response) => res.status(200).send(response.data))
     .catch((e) => {
