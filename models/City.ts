@@ -4,4 +4,5 @@ export type City = {
   province: string;
   lat: number;
   lng: number;
+  image: any;
 };

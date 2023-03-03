@@ -19,6 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           province: city.province,
           lat: city.lat,
           lng: city.lng,
+          image: city.image,
         } as City);
       } catch (e) {
         console.log(e);
