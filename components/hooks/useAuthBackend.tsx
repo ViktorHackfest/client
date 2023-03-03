@@ -42,12 +42,22 @@ export const useAuthBackend = () => {
       // Handler to call on window resize
       const accessToken = userAccessToken();
       if (!accessToken) return router.push('/auth/login');
-      const [userInfo] = fetchUser();
+      const [userInfo] = fetchUser(); // Fetch from Google Firebase
       console.log(userInfo);
+      // Compose to object Traveler
+      const traveler = {
+        id: userInfo.uid,
+        money: 1000000,
+      };
+      setTravelerData(traveler);
 
       const handleSubmit = (values: Traveler) => {
         axios
-          .post('/api/user/register', { data: values })
+          .post(
+            '/api/user/register',
+            { data: values },
+            { params: { type_user: 'traveler' } }
+          )
           .then((res) => {
             showRegistrationResult(res.status);
           })
@@ -57,7 +67,7 @@ export const useAuthBackend = () => {
           });
       };
       // Call handler right away so state gets updated
-      handleSubmit({ id: '1', money: 1000000 });
+      handleSubmit(traveler);
     })();
   }, []); // Empty array ensures that effect is only run on mount
   return travelerData;
