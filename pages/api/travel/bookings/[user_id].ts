@@ -4,10 +4,19 @@ import { Booking } from '@models/Booking';
 import axios from 'axios';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const userInfo = localStorage.getItem('user');
+  const { user_id } = req.query;
+  console.log(userInfo);
+  let config = {
+    headers: {
+      HTTP_X_FIREBASE_ID: user_id,
+    },
+  };
   if (req.method === 'GET') {
     axios
       .get(
-        `${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/bookings/`
+        `${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/bookings/`,
+        config
       )
       .then((response) => {
         // console.log(response.data);
