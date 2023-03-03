@@ -1,4 +1,4 @@
 export type Traveler = {
-  id: number;
+  id: string;
   money: number;
 };

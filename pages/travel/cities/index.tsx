@@ -1,4 +1,5 @@
 import { CitiesContainer } from '@components/modules/travel/cities';
+import { useAuthBackend } from '@hooks';
 import { City } from '@models/City';
 import { LoadingScreen } from '@ui';
 import axios from 'axios';
@@ -18,6 +19,8 @@ const Cities: NextPage = () => {
       if (response.data.length === 0) setIsEmpty(true);
     });
   }, []);
+
+  useAuthBackend();
 
   if (citiesLoading) {
     return <LoadingScreen />;
