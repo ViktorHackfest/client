@@ -4,12 +4,17 @@ import { City } from '@models/City';
 import axios from 'axios';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  console.log('TOST');
   const { slug } = req.query;
+  console.log(slug);
   axios
-    .get(`${process.env.NEXT_PUBLIC_API_STRAPI}/travel/cities/${slug}`)
+    .get(
+      `${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/cities/${slug}/`
+    )
     .then((response) => {
       try {
         const city = response.data;
+        console.log(city);
         res.status(200).json({
           id: city.id,
           name: city.name,
