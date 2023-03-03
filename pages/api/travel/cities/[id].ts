@@ -4,10 +4,10 @@ import { City } from '@models/City';
 import axios from 'axios';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { slug } = req.query;
+  const { id } = req.query;
   axios
     .get(
-      `${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/cities/${slug}/`
+      `${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/cities/${id}/`
     )
     .then((response) => {
       try {

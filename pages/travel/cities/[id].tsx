@@ -4,14 +4,14 @@ import { useEffect } from 'react';
 
 const City = (city: any) => {
   const router = useRouter();
-  const { slug } = router.query;
+  const { id } = router.query;
 
   useEffect(() => {
-    if (!slug) return;
-    axios.get(`/api/travel/cities/${slug}`).then((response) => {
+    if (!id) return;
+    axios.get(`/api/travel/cities/${id}`).then((response) => {
       console.log(response.data);
     });
-  }, [slug]);
+  }, [id]);
 };
 
 export default City;
