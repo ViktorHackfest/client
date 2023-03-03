@@ -52,6 +52,9 @@ export const useAuthBackend = () => {
       };
       setTravelerData(traveler);
 
+      // GET USER FROM BACKEND
+
+      // POST USER TO BACKEND
       const handleSubmit = (values: Traveler) => {
         axios
           .post(
