@@ -1,17 +1,18 @@
-type CitiesContainerProps = {
-  cities: any;
+type DestinationsContainerProps = {
+  destinations: any;
 };
 
-export const CitiesContainer = ({ cities }: CitiesContainerProps) => {
+export const DestinationsContainer = ({
+  destinations,
+}: DestinationsContainerProps) => {
   return (
     <div>
-      {cities.map((city: any, id_city: number) => (
-        <div key={id_city}>
-          <div>{city.id}</div>
-          <div>{city.name}</div>
-          <div>{city.province}</div>
-          <div>{city.lat}</div>
-          <div>{city.lng}</div>
+      {destinations.map((destination: any, id_destination: number) => (
+        <div key={id_destination}>
+          <div>{destination.id}</div>
+          <div>{destination.name}</div>
+          <div>{destination.city}</div>
+          <div>{destination.description}</div>
         </div>
       ))}
     </div>
