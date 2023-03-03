@@ -4,9 +4,7 @@ import { City } from '@models/City';
 import axios from 'axios';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  console.log('TOST');
   const { slug } = req.query;
-  console.log(slug);
   axios
     .get(
       `${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/cities/${slug}/`

@@ -10,7 +10,6 @@ const City = (city: any) => {
     if (!slug) return;
     axios.get(`/api/travel/cities/${slug}`).then((response) => {
       console.log(response.data);
-      console.log('TESTING');
     });
   }, [slug]);
 };
