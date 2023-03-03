@@ -9,6 +9,8 @@ import { useEffect, useState } from 'react';
 // IF EXIST THEN GET DATA
 
 export const useAuthBackend = () => {
+  const [allTraveler, setAllTraveler] = useState<Traveler[]>([]);
+  const [isRegistered, setIsRegistered] = useState(false);
   const router = useRouter();
   // Sementara ini ke Traveler dulu nanti dihandle ke User yang punya
   // attribute role traveler dan tour guide
@@ -53,6 +55,16 @@ export const useAuthBackend = () => {
       setTravelerData(traveler);
 
       // GET USER FROM BACKEND
+      axios.get('/api/user/traveler').then((response) => {
+        setAllTraveler(response.data);
+        // Jika sudah ada di database maka langsung ambil data
+        for (let t of response.data) {
+          if (t.id == userInfo.uid) {
+            console.log("Traveler already registered! Let's get data!");
+            setIsRegistered(true);
+          }
+        }
+      });
 
       // POST USER TO BACKEND
       const handleSubmit = (values: Traveler) => {
@@ -70,8 +82,12 @@ export const useAuthBackend = () => {
             showRegistrationResult(error.response.status);
           });
       };
-      // Call handler right away so state gets updated
-      handleSubmit(traveler);
+      // Jika belum ada di database maka tambahkan
+      setTimeout(() => {
+        if (!isRegistered) {
+          handleSubmit(traveler);
+        }
+      }, 5000);
     })();
   }, []); // Empty array ensures that effect is only run on mount
   return travelerData;
