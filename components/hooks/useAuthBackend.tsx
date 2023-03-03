@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 
 export const useAuthBackend = () => {
   const [allTraveler, setAllTraveler] = useState<Traveler[]>([]);
-  const [isRegistered, setIsRegistered] = useState(false);
+  // const [isRegistered, setIsRegistered] = useState(false);
   const router = useRouter();
   // Sementara ini ke Traveler dulu nanti dihandle ke User yang punya
   // attribute role traveler dan tour guide
@@ -54,18 +54,6 @@ export const useAuthBackend = () => {
       };
       setTravelerData(traveler);
 
-      // GET USER FROM BACKEND
-      axios.get('/api/user/traveler').then((response) => {
-        setAllTraveler(response.data);
-        // Jika sudah ada di database maka langsung ambil data
-        for (let t of response.data) {
-          if (t.id == userInfo.uid) {
-            console.log("Traveler already registered! Let's get data!");
-            setIsRegistered(true);
-          }
-        }
-      });
-
       // POST USER TO BACKEND
       const handleSubmit = (values: Traveler) => {
         axios
@@ -82,13 +70,24 @@ export const useAuthBackend = () => {
             showRegistrationResult(error.response.status);
           });
       };
-      // Jika belum ada di database maka tambahkan
-      setTimeout(() => {
+
+      // GET USER FROM BACKEND
+      axios.get('/api/user/traveler').then((response) => {
+        setAllTraveler(response.data);
+        // Jika sudah ada di database maka langsung ambil data
+        let isRegistered = false;
+        for (let t of response.data) {
+          if (t.id == userInfo.uid) {
+            console.log("Traveler already registered! Let's get data!");
+            isRegistered = true;
+          }
+        }
+        // Jika belum ada di database maka tambahkan ke database (POST)
         if (!isRegistered) {
           handleSubmit(traveler);
         }
-      }, 5000);
+      });
     })();
-  }, []); // Empty array ensures that effect is only run on mount
+  }, []);
   return travelerData;
 };
