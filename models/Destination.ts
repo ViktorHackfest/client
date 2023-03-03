@@ -1,7 +1,9 @@
+import { City } from '@models/City';
+
 export type Destination = {
   id: number;
   name: string;
-  city: any;
+  city: City;
   description: string;
   image: any;
 };
