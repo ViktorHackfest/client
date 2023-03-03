@@ -3,4 +3,5 @@ export type Destination = {
   name: string;
   city: any;
   description: string;
+  image: any;
 };

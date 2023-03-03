@@ -14,6 +14,7 @@ const Destinations: NextPage = () => {
   useEffect(() => {
     axios.get('/api/travel/destinations').then((response) => {
       setDestinations(response.data);
+      console.log(response.data);
       setDestinationsLoading(false);
       if (response.data.length === 0) setIsEmpty(true);
     });

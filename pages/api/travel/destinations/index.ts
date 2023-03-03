@@ -20,6 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   name: destination.name,
                   city: destination.city,
                   description: destination.description,
+                  image: destination.image,
                 } as Destination)
             )
           );
