@@ -10,9 +10,9 @@ const Destination = (booking: any) => {
 
   useEffect(() => {
     if (!id || !user_id) return;
-    console.log(id);
-    console.log(user_id);
-    axios.get(`/api/travel/bookings/${id}`).then((response) => {
+    // console.log(id);
+    // console.log(user_id);
+    axios.get(`/api/travel/bookings/${user_id}/${id}`).then((response) => {
       console.log(response.data);
     });
   }, [id, user_id]);

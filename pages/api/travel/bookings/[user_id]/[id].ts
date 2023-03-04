@@ -1,10 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { City } from '@models/City';
+import { Booking } from '@models/Booking';
 import axios from 'axios';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
+  console.log(id);
   let config = {
     headers: {
       'X-Firebase-ID': req.query.user_id,
@@ -12,20 +13,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   };
   axios
     .get(
-      `${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/bookings/${id}/`
+      `${process.env.NEXT_PUBLIC_DEPLOY_SERVER_DEVELOPMENT}/travel/bookings/${id}/`,
+      config
     )
     .then((response) => {
       try {
-        const city = response.data;
-        console.log(city);
+        const booking = response.data;
+        console.log(booking);
         res.status(200).json({
-          id: city.id,
-          name: city.name,
-          province: city.province,
-          lat: city.lat,
-          lng: city.lng,
-          image: city.image,
-        } as City);
+          id: booking.id,
+          traveler: booking.traveler,
+          tour_guide: booking.tour_guide,
+          start_date: booking.start_date,
+          end_date: booking.end_date,
+          price: booking.price,
+          is_offline: booking.is_offline,
+          status: booking.status,
+        } as Booking);
       } catch (e) {
         console.log(e);
       }
