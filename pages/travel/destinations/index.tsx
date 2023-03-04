@@ -1,6 +1,6 @@
 import { DestinationsContainer } from '@components/modules/travel/destinations';
 import { Destination } from '@models/Destination';
-import { LoadingScreen } from '@ui';
+import { Breadcrumb, Footer, LoadingScreen, Navbar } from '@ui';
 import axios from 'axios';
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
@@ -24,7 +24,14 @@ const Destinations: NextPage = () => {
     return <LoadingScreen />;
   } else {
     if (isEmpty) return <div>There are no destinations</div>;
-    return <DestinationsContainer destinations={destinations} />;
+    return (
+      <>
+        <Navbar />
+        <Breadcrumb path={['City', 'Destinations']} />
+        <DestinationsContainer destinations={destinations} />
+        <Footer />
+      </>
+    );
   }
 };
 
