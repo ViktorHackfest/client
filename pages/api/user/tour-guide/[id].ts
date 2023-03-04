@@ -15,6 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         res.status(200).json({
           id: tour_guide.id,
           city: tour_guide.city,
+          name: tour_guide.name,
+          photo_url: tour_guide.photo_url,
         } as TourGuide);
       } catch (e) {
         console.log(e);
