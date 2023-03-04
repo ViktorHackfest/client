@@ -4,6 +4,7 @@ import {
   ShortcutButton,
 } from '@components/modules/home';
 import { Destination } from '@models/Destination';
+import { TourGuide } from '@models/TourGuide';
 import { Footer, Navbar } from '@ui';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -14,6 +15,11 @@ export default function Dashboard() {
   const [destinationsLoading, setDestinationsLoading] = useState(true);
   const [isDestinationsEmpty, setIsDestinationsEmpty] = useState(false);
 
+  // GET : api/travel/destinations
+  const [tourguides, setTourguides] = useState<TourGuide>();
+  const [tourguidesLoading, setTourguidesLoading] = useState(true);
+  const [isTourguidesEmpty, setIsTourguidesEmpty] = useState(false);
+
   useEffect(() => {
     axios.get('/api/travel/destinations').then((response) => {
       setDestinations(response.data);
@@ -23,7 +29,16 @@ export default function Dashboard() {
     });
   }, []);
 
-  if (destinationsLoading) {
+  useEffect(() => {
+    axios.get('/api/user/tour-guide').then((response) => {
+      setTourguides(response.data);
+      console.log(response.data);
+      setTourguidesLoading(false);
+      if (response.data.length === 0) setIsTourguidesEmpty(true);
+    });
+  }, []);
+
+  if (destinationsLoading || tourguidesLoading) {
     return <div>Loading...</div>;
   } else {
     return (
@@ -31,7 +46,7 @@ export default function Dashboard() {
         <Navbar />
         <SearchDestination destinations={destinations} />
         <ShortcutButton />
-        <NearestTourGuide />
+        <NearestTourGuide tour_guides={tourguides} />
         <Footer />
       </div>
     );
