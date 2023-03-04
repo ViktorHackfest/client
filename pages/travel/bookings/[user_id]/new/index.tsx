@@ -1,7 +1,9 @@
-import { Button, InputFieldFormik, Toast } from '@ui';
+import { Breadcrumb, Button, Footer, InputField, Navbar, Toast } from '@ui';
 import axios from 'axios';
-import { Form, Formik } from 'formik';
 import { NextPage } from 'next';
+import Link from 'next/link';
+import { FaCalendarAlt } from 'react-icons/fa';
+import { GoPerson } from 'react-icons/go';
 
 const COUNTRY_CODE = '+62';
 
@@ -47,85 +49,73 @@ const BookingSection: NextPage = () => {
       });
   };
   return (
-    <div className="bg-denim-dark ">
-      <div className="mb-4"></div>
+    <>
+      <Navbar />
+      <Breadcrumb path={['Tour Guide', 'Mario', 'Booking']} />
       <div className="">
-        <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-          {(props) => (
-            <Form className="flex flex-col gap-2 max-w-sm mx-auto">
-              <InputFieldFormik
-                name="name"
-                type="text"
-                label="Nama Lengkap"
-                placeholder="Nama Lengkap"
-                dark
-                required
-              />
-              <InputFieldFormik
-                name="age"
-                type="number"
-                label="Usia"
-                placeholder="Masukkan angka"
-                dark
-                required
-              />
-              <InputFieldFormik
-                name="address"
-                type="text"
-                label="Alamat"
-                placeholder=""
-                dark
-                required
-              />
-              <InputFieldFormik
-                name="institute"
-                type="text"
-                label="Asal Instansi"
-                dark
-              />
-              <InputFieldFormik
-                name="email"
-                type="email"
-                label="Email"
-                placeholder="JohnDoe@gmail.com"
-                dark
-                required
-              />
-              <InputFieldFormik
-                name="phone"
-                type="tel"
-                label="Nomor Telepon/WhatsApp*"
-                placeholder={COUNTRY_CODE}
-                dark
-                required
-              />
-              <InputFieldFormik
-                name="line"
-                type="text"
-                label="Id Line"
-                dark
-                required
-              />
-              <InputFieldFormik
-                name="donationDate"
-                type="date"
-                label="Tanggal Donor Darah"
-                required
-                dark
-              />
-              <Button
-                preset="primary"
-                className="mt-4  self-center"
-                type="submit"
-                disabled={props.isSubmitting}
-              >
-                Daftar
+        <div className="mb-4"></div>
+        <form>
+          <div className="bg-red-400 py-8">
+            <div className="text-center pb-4 text-2xl font-bold text-white">
+              Tour Guide Booking
+            </div>
+            <div className="bg-white mx-8 p-8 rounded-xl">
+              <div className="flex flex-col">
+                <InputField
+                  label="Tour Guide"
+                  name="tour_guide"
+                  leftIcon={<GoPerson />}
+                  value="Mario"
+                  isDisabled={true}
+                />
+                <InputField
+                  label="Start Date"
+                  type="date"
+                  name="start_date"
+                  leftIcon={<FaCalendarAlt />}
+                  placeholder="Search for your desired date"
+                />
+                <InputField
+                  label="End Date"
+                  type="date"
+                  name="end_date"
+                  leftIcon={<FaCalendarAlt />}
+                  placeholder="Search for your desired date"
+                />
+                <InputField
+                  label="Price"
+                  name="price"
+                  leftIcon={<FaCalendarAlt />}
+                  value="Rp. 200.000"
+                  isDisabled={true}
+                />
+                <div className="flex px-2 py-6 gap-2">
+                  <input type="checkbox"></input>
+                  <label>Offline Tour</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center gap-8 pt-20">
+            <Link href="/user/tour-guide">
+              <Button preset="tertiary" className="text-red-400">
+                Cancel
               </Button>
-            </Form>
-          )}
-        </Formik>
+            </Link>
+            <Button
+              preset="primary"
+              className="text-white border-red-4  00 border-2"
+              type="submit"
+            >
+              Next
+            </Button>
+          </div>
+        </form>
       </div>
-    </div>
+      <div className="h-20"></div>
+      <Footer />
+    </>
   );
 };
 
