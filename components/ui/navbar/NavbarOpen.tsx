@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineCalendar, AiOutlineHome } from 'react-icons/ai';
 import { GiPerson } from 'react-icons/gi';
+import { GrClose } from 'react-icons/gr';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { MdInfoOutline, MdOutlineFestival } from 'react-icons/md';
 
@@ -40,13 +41,18 @@ const FEATURES = [
 
 export const NavbarOpen = () => {
   return (
-    <div className="bg-white px-10">
-      <Image
-        src="/assets/images/logo-navbar-tripfolk.svg"
-        alt=""
-        width={180}
-        height={180}
-      />
+    <div className="bg-white px-10 h-screen">
+      <div className="flex justify-between items-center">
+        <Image
+          src="/assets/images/logo-navbar-tripfolk.svg"
+          alt=""
+          width={180}
+          height={180}
+        />
+        <button>
+          <GrClose className="float-right text-3xl" />
+        </button>
+      </div>
       <div className="h-6"></div>
       {FEATURES.map((feature: any, id_feature: number) => (
         <Link href={feature.route} key={id_feature}>
