@@ -9,7 +9,7 @@ export default function Home() {
   };
   return (
     <>
-      <div className="w-screen h-screen flex justify-center items-center bg-slate-800 relative">
+      <div className="h-minscreen flex justify-center items-center bg-slate-800 relative">
         <Image
           src="/assets/images/auth-started.svg"
           width={100}

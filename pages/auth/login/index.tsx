@@ -22,7 +22,7 @@ const Login: NextPage = () => {
     localStorage.setItem('user', JSON.stringify(providerData));
     localStorage.setItem('accessToken', JSON.stringify(refreshToken));
 
-    router.push('/logout');
+    router.push('/home');
   };
   return (
     <>

@@ -32,7 +32,7 @@ const Logout: NextPage = () => {
   };
 
   return (
-    <>
+    <div className="h-minscreen">
       <Navbar />
       <div className="w-screen h-screen flex justify-center items-center bg-slate-100">
         <div className="w-1/3 h-auto p-4 bg-white shadow-md rounded-md flex justify-start items-center relative">
@@ -57,7 +57,7 @@ const Logout: NextPage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -20,7 +20,7 @@ const Link = ({ href, children }: LinkProps) => {
 
 export const Footer = () => {
   return (
-    <footer className="bg-red-400 p-6">
+    <footer className="bg-red-400 p-10">
       <div className="flex flex-col content-center justify-center text-powder text-center">
         <div className="relative w-auto h-[8vw] pb-6 py-16 mt-8 mb-8">
           <Image
