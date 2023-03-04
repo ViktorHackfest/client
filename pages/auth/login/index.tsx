@@ -41,12 +41,9 @@ const Login: NextPage = () => {
               TripFolk
             </div>
             <div className="text-white/80 border-2 border-white/20 p-8 rounded-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Tripfolk is an application that connects tourists with local
+              residents for mutual benefits. We provide IoT device for tourists
+              who chose online Tour Guide to ensure their safety
             </div>
             <div className="h-6"></div>
             <div
