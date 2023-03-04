@@ -1,4 +1,4 @@
-import { TourGuideBanner } from '@components/modules/user';
+import { PopularTourGuides, TourGuideBanner } from '@components/modules/user';
 import { useAuthBackend } from '@hooks';
 import { City } from '@models/City';
 import { Breadcrumb, Footer, LoadingScreen, Navbar } from '@ui';
@@ -32,6 +32,7 @@ const TourGuide: NextPage = () => {
         <Navbar />
         <Breadcrumb path={['Tour Guide']} />
         <TourGuideBanner />
+        <PopularTourGuides tour_guides={tourGuides} />
         <Footer />
       </>
     );
