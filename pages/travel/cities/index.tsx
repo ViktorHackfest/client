@@ -1,7 +1,7 @@
 import { CitiesContainer } from '@components/modules/travel/cities';
 import { useAuthBackend } from '@hooks';
 import { City } from '@models/City';
-import { LoadingScreen } from '@ui';
+import { Breadcrumb, Footer, LoadingScreen, Navbar } from '@ui';
 import axios from 'axios';
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
@@ -26,7 +26,14 @@ const Cities: NextPage = () => {
     return <LoadingScreen />;
   } else {
     if (isEmpty) return <div>There are no cities</div>;
-    return <CitiesContainer cities={cities} />;
+    return (
+      <>
+        <Navbar />
+        <Breadcrumb path={['Cities']} />
+        <CitiesContainer cities={cities} />
+        <Footer />
+      </>
+    );
   }
 };
 
