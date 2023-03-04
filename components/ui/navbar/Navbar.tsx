@@ -30,10 +30,11 @@ export const Navbar = () => {
 
   const navbarOpenHandler = () => {
     setShowNavbarOpen(!showNavbarOpen);
+    console.log('TEST');
   };
 
   if (showNavbarOpen) {
-    return <NavbarOpen />;
+    return <NavbarOpen handler={navbarOpenHandler} />;
   }
   if (!isLoggedIn)
     return (

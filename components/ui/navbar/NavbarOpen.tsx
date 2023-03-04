@@ -39,7 +39,7 @@ const FEATURES = [
   },
 ];
 
-export const NavbarOpen = () => {
+export const NavbarOpen = ({ handler }: any) => {
   return (
     <div className="bg-white px-10 h-screen">
       <div className="flex justify-between items-center">
@@ -49,7 +49,7 @@ export const NavbarOpen = () => {
           width={180}
           height={180}
         />
-        <button>
+        <button onClick={() => handler()}>
           <GrClose className="float-right text-3xl" />
         </button>
       </div>
