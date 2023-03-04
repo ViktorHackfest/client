@@ -1,13 +1,36 @@
 import { Breadcrumb, Button, Footer, InputField, Navbar, Toast } from '@ui';
+import { fetchUser, userAccessToken } from '@utils/fetchGoogleAuth';
 import axios from 'axios';
 import { NextPage } from 'next';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { FaCalendarAlt } from 'react-icons/fa';
 import { GoPerson } from 'react-icons/go';
 
-const COUNTRY_CODE = '+62';
+type User = {
+  photoURL: string;
+  displayName: string;
+  email: string;
+  uid: string;
+};
 
 const BookingSection: NextPage = () => {
+  const router = useRouter();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState<User>();
+
+  useEffect(() => {
+    (async () => {
+      const accessToken = userAccessToken();
+      if (!accessToken) return router.push('/auth/login');
+      const [userInfo] = fetchUser();
+      console.log(userInfo);
+      setUser(userInfo);
+      setIsLoggedIn(true);
+    })();
+  }, []);
+
   const initialValues = {
     tour_guide: '1',
     start_date: '2023-03-04',
@@ -48,6 +71,8 @@ const BookingSection: NextPage = () => {
         showRegistrationResult(error.response.status);
       });
   };
+
+  if (!isLoggedIn) return <div>Not Logged In</div>;
   return (
     <>
       <Navbar />
@@ -103,13 +128,15 @@ const BookingSection: NextPage = () => {
                 Cancel
               </Button>
             </Link>
-            <Button
-              preset="primary"
-              className="text-white border-red-4  00 border-2"
-              type="submit"
-            >
-              Next
-            </Button>
+            <Link href={`/travel/bookings/${user?.uid}`}>
+              <Button
+                preset="primary"
+                className="text-white border-red-4  00 border-2"
+                type="submit"
+              >
+                Next
+              </Button>
+            </Link>
           </div>
         </form>
       </div>
