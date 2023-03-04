@@ -1,4 +1,5 @@
 import { Card, InputField } from '@ui';
+import { BiSearch } from 'react-icons/bi';
 import { IoLocationSharp } from 'react-icons/io5';
 
 export const SearchDestination = ({ destinations }: any) => {
@@ -11,12 +12,18 @@ export const SearchDestination = ({ destinations }: any) => {
   return (
     <Card preset="dark" className="rounded-none">
       <div>
-        <div>
-          <IoLocationSharp />
+        <div className="flex gap-2 items-center text-xl font-semibold">
+          <IoLocationSharp className="text-black" />
           <p>Choose Destination</p>
         </div>
-        <div>
-          <InputField placeholder="Search Destination" />
+        <div className="my-4">
+          <InputField
+            key="key"
+            type="text"
+            placeholder="Find your desired tourist destination"
+            leftIcon={<BiSearch className="w-4 h-4" color="gray.300" />}
+            className="bg-white rounded-xl"
+          />
         </div>
         {/* STATIC FIRST */}
         <div>
