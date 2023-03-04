@@ -21,7 +21,7 @@ export const PopularTourGuides = ({ tour_guides }: PopularTourGuideProps) => {
                 <div>
                   <div className="w-60"></div>
                   <Image
-                    src={tour_guide.city.image}
+                    src={tour_guide.photo_url}
                     alt="City Image"
                     width={100}
                     height={100}
@@ -29,7 +29,7 @@ export const PopularTourGuides = ({ tour_guides }: PopularTourGuideProps) => {
                   />
                 </div>
                 <div className="p-4">
-                  <div className="font-bold">Eugenius Mario</div>
+                  <div className="font-bold">{tour_guide.name}</div>
                   <div className="h-2"></div>
                   <div className="flex gap-4 items-center">
                     <div className="flex items-center gap-[6px]">

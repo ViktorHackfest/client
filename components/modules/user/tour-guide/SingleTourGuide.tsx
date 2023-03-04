@@ -35,14 +35,14 @@ export const SingleTourGuide = ({ tour_guide }: any) => {
   return (
     <div>
       <Image
-        src={tour_guide.city.image}
+        src={tour_guide.photo_url}
         alt="Tour Guide Image"
         width={100}
         height={100}
         className="object-cover w-full h-[340px]"
       />
       <div className="px-8 py-10">
-        <div className="text-2xl font-bold">Eugenius Mario</div>
+        <div className="text-2xl font-bold">{tour_guide.name}</div>
         <div className="h-2"></div>
         <div className="flex gap-4 items-center text-lg">
           <div className="flex items-center gap-[6px]">

@@ -76,7 +76,7 @@ const BookingSection: NextPage = () => {
   return (
     <>
       <Navbar />
-      <Breadcrumb path={['Tour Guide', 'Mario', 'Booking']} />
+      <Breadcrumb path={['Tour Guide', 'Feri Sulu', 'Booking']} />
       <div className="">
         <div className="mb-4"></div>
         <form>
@@ -90,7 +90,7 @@ const BookingSection: NextPage = () => {
                   label="Tour Guide"
                   name="tour_guide"
                   leftIcon={<GoPerson />}
-                  value="Mario"
+                  value="Feri Sulu"
                   isDisabled={true}
                 />
                 <InputField

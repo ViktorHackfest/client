@@ -10,6 +10,7 @@ const TourGuideById = (tour_guide: any) => {
   const { id } = router.query;
 
   const [tourGuide, setTourGuide] = useState<TourGuide>();
+  const [name, setName] = useState<string>('');
   const [tourGuideLoading, setTourGuideLoading] = useState(true);
   const [isEmpty, setIsEmpty] = useState(false);
 
@@ -18,6 +19,7 @@ const TourGuideById = (tour_guide: any) => {
     axios.get(`/api/user/tour-guide/${id}`).then((response) => {
       setTourGuide(response.data);
       setTourGuideLoading(false);
+      setName(response.data.name);
       if (response.data.length === 0) setIsEmpty(true);
     });
   }, [id]);
@@ -29,7 +31,7 @@ const TourGuideById = (tour_guide: any) => {
     return (
       <>
         <Navbar />
-        <Breadcrumb path={['Tour Guide', 'Mario']} />
+        <Breadcrumb path={['Tour Guide', name]} />
         <SingleTourGuide tour_guide={tourGuide} />
         <Footer />
       </>
