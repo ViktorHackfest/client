@@ -1,6 +1,6 @@
 import { BookingsContainer } from '@components/modules/travel/bookings';
 import { Booking } from '@models/Booking';
-import { LoadingScreen } from '@ui';
+import { Breadcrumb, Footer, LoadingScreen, Navbar } from '@ui';
 import axios from 'axios';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
@@ -27,7 +27,14 @@ const BookingByUserId: NextPage = () => {
     return <LoadingScreen />;
   } else {
     if (isEmpty) return <div>There are no bookings</div>;
-    return <BookingsContainer bookings={bookings} />;
+    return (
+      <>
+        <Navbar />
+        <Breadcrumb path={['Tour Guide Bookings']} />
+        <BookingsContainer bookings={bookings} />
+        <Footer />
+      </>
+    );
   }
 };
 
