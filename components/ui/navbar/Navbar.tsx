@@ -33,12 +33,11 @@ export const Navbar = () => {
     console.log('TEST');
   };
 
-  if (showNavbarOpen) {
-    return <NavbarOpen handler={navbarOpenHandler} />;
-  }
+
   if (!isLoggedIn)
     return (
       <>
+        {showNavbarOpen && <NavbarOpen handler={navbarOpenHandler} />}
         <div className="flex justify-between border-b-2 border-b-black py-4 px-4">
           <Image
             src="/assets/images/logo-navbar-tripfolk.svg"
@@ -59,6 +58,7 @@ export const Navbar = () => {
     // Logged In User
     return (
       <>
+        {showNavbarOpen && <NavbarOpen handler={navbarOpenHandler} />}
         <div className="flex justify-between shadow-xl shadow-red-500/5 py-4 px-4">
           <Image
             src="/assets/images/logo-navbar-tripfolk.svg"
