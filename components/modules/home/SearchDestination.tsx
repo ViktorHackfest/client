@@ -22,7 +22,7 @@ export const SearchDestination = ({ destinations }: any) => {
             type="text"
             placeholder="Find your desired tourist destination"
             leftIcon={<BiSearch className="w-4 h-4" color="gray.300" />}
-            className="bg-white rounded-xl"
+            className="bg-white rounded-xl z-0"
           />
         </div>
         {/* STATIC FIRST */}

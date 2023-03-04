@@ -41,7 +41,7 @@ const FEATURES = [
 
 export const NavbarOpen = ({ handler }: any) => {
   return (
-    <div className="absolute bg-white px-10 h-screen py-10 w-[80%] z-100">
+    <div className="absolute bg-white px-10 h-screen py-10 w-[80%] z-10">
       <div className="flex justify-between items-center">
         <Image
           src="/assets/images/logo-navbar-tripfolk.svg"
