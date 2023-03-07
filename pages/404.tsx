@@ -1,4 +1,4 @@
-import { Navbar } from '@ui';
+import { Footer, Navbar } from '@ui';
 import { NextPage } from 'next';
 import Image from 'next/image';
 
@@ -15,6 +15,7 @@ const Custom404: NextPage = () => {
           className="object-cover w-full"
         />
       </div>
+      <Footer />
     </>
   );
 };
