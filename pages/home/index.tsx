@@ -5,7 +5,7 @@ import {
 } from '@components/modules/home';
 import { Destination } from '@models/Destination';
 import { TourGuide } from '@models/TourGuide';
-import { Footer, Navbar } from '@ui';
+import { Footer, LoadingScreen, Navbar } from '@ui';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -39,7 +39,7 @@ export default function Dashboard() {
   }, []);
 
   if (destinationsLoading || tourguidesLoading) {
-    return <div>Loading...</div>;
+    return <LoadingScreen />;
   } else {
     return (
       <div className="h-minscreen bg-slate-800">
